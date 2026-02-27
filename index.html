@@ -75,15 +75,30 @@
 
     <div class="error" id="loginError"></div>
 
-    <button onclick="login()">Anmelden</button>
+    <div class="ack-row">
+  <label class="ack-label">
+    <input type="checkbox" id="chkPrivacyAck">
+    <span>Ich habe die Datenschutzerklärung zur Kenntnis genommen.</span>
+  </label>
+</div>
 
+    <button id="btnLogin" onclick="login()">Anmelden</button>
     <button onclick="forgotPassword()">Passwort vergessen</button><br>
     <br>
     <br>
     <br>
     <p><strong>Noch keine Login-Daten?</strong><br>
     <button onclick="showPage('page-register')">Hier registrieren</button>
+<br>
+    <br>
+<!-- Buttons/Links zu Datenschutz & Impressum -->
+<div class="legal-links">
+  <a href="#" class="legal-link" onclick="showPage('page-privacy'); return false;">Datenschutzerklärung</a>
+  <span class="legal-sep">|</span>
+  <a href="#" class="legal-link" onclick="showPage('page-imprint'); return false;">Impressum</a>
 </div>
+</div>
+
 
 <!-- SEITE 1.1 Registrierung:  -->
 <div id="page-register" class="page">
@@ -103,10 +118,25 @@
 <br> 
 <p>Wir prüfen Ihre Angaben und Sie erhalten innerhalb<br>von 24h eine System-E-Mail für Ihre Passwortvergabe.<br>(Schauen Sie auch in Ihrem Spam-Ordner.)</p>
 <br> 
-<br> 
+ 
+<div class="ack-row">
+  <label class="ack-label">
+    <input type="checkbox" id="chkPrivacyAck2">
+    <span>Ich habe die Datenschutzerklärung zur Kenntnis genommen.</span>
+  </label>
+</div>
 
-  <button onclick="registerRequest()">Registrierung absenden</button>
+<button id="btnRegisterSend" onclick="registerRequest()">Registrierung absenden</button>
+<button type="button" onclick="showPage('page-login')">Zurück zum Login</button>
+<br> 
+<br>
+<div class="legal-links">
+  <a href="#" class="legal-link" onclick="showPage('page-privacy'); return false;">Datenschutzerklärung</a>
+  <span class="legal-sep">|</span>
+  <a href="#" class="legal-link" onclick="showPage('page-imprint'); return false;">Impressum</a>
+</div>
   </div>
+
 
 <!-- SEITE 1.1 Registrierung:  -->
 <div id="page-admin" class="page">
@@ -119,6 +149,142 @@
   <h3>Registrierungen (wartend)</h3>
   <div id="admin-registrations" class="box">
     <div>Lade Daten…</div>
+  </div>
+</div>
+
+<!-- SEITE: DATENSCHUTZ -->
+<div class="page" id="page-privacy">
+  <h2>Datenschutzerklärung – NDF KalkPro1.0
+</h2>
+
+  <div class="box" style="text-align:left;">
+
+<h3>1. Verantwortlicher</h3>
+Verantwortlich für die Datenverarbeitung im Zusammenhang mit dem Tool „NDF KalkPro1.0“ ist:<br>
+NDF Norddeutsche Flächenheizsysteme GmbH<br>
+Raiffeisenstraße 13<br>
+21641 Apensen<br>
+Telefon: 04163 910 80 91<br>
+E-Mail: info@ndf-gmbh.de
+
+<h3>2. Zweck und Rechtsgrundlage der Verarbeitung</h3>
+Wir verarbeiten personenbezogene Daten, um die Nutzung des Tools zu ermöglichen, insbesondere:<br>
+
+- Registrierung und Anmeldung von Nutzern<br>
+
+- Bereitstellung der Funktionen des Tools (Kalkulation, PDF-Erstellung)
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertrag / vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung des Tools), soweit anwendbar.
+
+<h3>3. Welche Daten verarbeiten wir?</h3>
+Je nach Nutzung des Tools können folgende Daten verarbeitet werden:<br>
+
+a) Registrierung/Anmeldung (Pflichtangaben)<br>
+
+- E-Mail-Adresse<br>
+
+- Passwort (wird im Regelfall von Firebase als Hash/Authentifizierungsinformation verarbeitet, nicht im Klartext von uns)<br>
+
+- Technische Metadaten zur Anmeldung (z. B. Zeitpunkt der Anmeldung)<br>
+
+b) Nutzungsdaten / technische Daten<br>
+Bei der Nutzung können technisch erforderliche Daten anfallen (z. B. IP-Adresse, Geräte-/Browser-Informationen, Zeitstempel), soweit dies zur Bereitstellung und Sicherheit des Dienstes erforderlich ist.<br>
+
+c) Eingaben im Tool / PDF-Erstellung<br>
+Sofern das Tool Eingabefelder für personenbezogene Angaben enthält (z. B. Name/Adresse), werden diese ausschließlich zur Darstellung/Verarbeitung im Tool und zur Erstellung von PDF-Dokumenten verwendet.
+Eingaben werden nach Neuladen oder über ‚Eingaben löschen‘ entfernt und nicht dauerhaft gespeichert.
+
+<h3>4. Empfänger / Dienstleister (Firebase/Google)</h3>
+Zur Bereitstellung von Authentifizierung und ggf. Datenhaltung nutzen wir Google Firebase (Google Ireland Limited bzw. Google LLC als Konzernunternehmen). Firebase wird hierbei typischerweise als Auftragsverarbeiter tätig.
+
+<h3>5. Drittlandübermittlung</h3>
+Im Rahmen der Nutzung von Firebase kann es zu Datenübermittlungen in Drittländer (z. B. USA) kommen. Wir stützen solche Übermittlungen – soweit erforderlich – auf geeignete Garantien (z. B. Standardvertragsklauseln / entsprechende Mechanismen von Google).
+
+<h3>6. Speicherdauer / Löschung</h3>
+Wir speichern personenbezogene Daten nur so lange, wie es für die oben genannten Zwecke erforderlich ist:<br>
+
+- Registrierungs-/Kontodaten: bis zur Löschung des Benutzerkontos bzw. solange ein aktiver Zugang besteht<br>
+
+- Protokoll-/Sicherheitsdaten: 90 Tage<br>
+
+- Eingaben zur PDF-Erstellung: bis durch Nutzer gelöscht
+
+<h3>7. Rechte der betroffenen Personen</h3>
+Betroffene Personen haben – soweit die Voraussetzungen vorliegen – folgende Rechte:<br>
+
+- Auskunft (Art. 15 DSGVO)<br>
+
+- Berichtigung (Art. 16 DSGVO)<br>
+
+- Löschung (Art. 17 DSGVO)<br>
+
+- Einschränkung (Art. 18 DSGVO)<br>
+
+- Datenübertragbarkeit (Art. 20 DSGVO)<br>
+
+- Widerspruch (Art. 21 DSGVO)<br>
+
+<h3>8. Beschwerderecht</h3>
+Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.
+
+<h3>9. Pflicht zur Bereitstellung von Daten</h3>
+Ohne die für Registrierung/Anmeldung erforderlichen Daten ist eine Nutzung des Tools nicht möglich.
+
+<h3>10. Automatisierte Entscheidungen / Profiling</h3>
+Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht statt.
+
+Stand: 27.02.2026<br><br>
+  </div>
+
+  <div class="button-bar">
+    <button onclick="showPage('page-login')">Zurück zum Login</button>
+  </div>
+</div>
+
+<!-- SEITE: IMPRESSUM -->
+<div class="page" id="page-imprint">
+  <h2>Impressum</h2>
+
+  <div class="box" style="text-align:left;">
+<h3>NDF Norddeutsche Flächenheizsysteme GmbH</h3>
+Raiffeisenstraße 13<br>
+21641 Apensen<br>
+<br>
+Handelsregister: 203838<br>
+Registergericht: Tostedt<br>
+<br>
+Vertreten durch:<br>
+Tilman Thesenfitz-Patsalis, Marcel Zens<br>
+<br>
+Kontakt:<br>
+Telefon: 04163 910 80 91<br>
+E-Mail: info@ndf-gmbh.de<br>
+<br>
+Umsatzsteuer-ID:<br>
+Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+DE288934923<br>
+<br>
+Angaben zur Berufs­haftpflicht­versicherung:<br>
+Name und Sitz des Versicherers:<br>
+R+V Allgemeine Versicherung AG<br>
+Raiffeisenplatz 1<br>
+65189 Wiesbaden<br>
+<br>
+Geltungsraum der Versicherung:<br>
+Weltweit außer USA und Canada<br>
+<br>
+Redaktionell verantwortlich:<br>
+Tilman Thesenfitz Patsalis, Marcel Zens<br>
+<br>
+EU-Streitschlichtung:<br>
+Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.<br>
+Unsere E-Mail-Adresse finden Sie oben im Impressum.<br>
+<br>
+Verbraucher­streit­beilegung/Universal­schlichtungs­stelle:<br>
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.<br>
+  </div>
+
+  <div class="button-bar">
+    <button onclick="showPage('page-login')">Zurück zum Login</button>
   </div>
 </div>
 

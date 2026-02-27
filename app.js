@@ -404,6 +404,40 @@ onAuthStateChanged(auth, user => {
 
 const db = getFirestore(fbApp);
 
+// -----------------------------
+// Datenschutz-Checkbox Gate (Login + Registrierung)
+// (ohne Persistenz: nach Reload wieder leer, Haken frei entfernbar)
+// -----------------------------
+function isPrivacyAccepted() {
+  const cb1 = document.getElementById("chkPrivacyAck");
+  const cb2 = document.getElementById("chkPrivacyAck2");
+  return !!(cb1?.checked || cb2?.checked);
+}
+
+function updateAuthButtons() {
+  const ok = isPrivacyAccepted();
+
+  const btnLogin = document.getElementById("btnLogin");
+  const btnRegisterSend = document.getElementById("btnRegisterSend");
+
+  // NICHT disabled setzen -> sonst kein Klick -> keine Fehlermeldung
+  btnLogin?.classList.toggle("btn-disabled", !ok);
+  btnRegisterSend?.classList.toggle("btn-disabled", !ok);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cb1 = document.getElementById("chkPrivacyAck");
+  const cb2 = document.getElementById("chkPrivacyAck2");
+
+  cb1?.addEventListener("change", updateAuthButtons);
+  cb2?.addEventListener("change", updateAuthButtons);
+
+  // Startzustand: ohne Haken
+  if (cb1) cb1.checked = false;
+  if (cb2) cb2.checked = false;
+
+  updateAuthButtons();
+});
 
 // -----------------------------
 // Registrierung anlegen (mit Zufallspasswort)
@@ -569,6 +603,14 @@ if (id === "page-14" || id === "page-14-2") {
       showLoader40(false);
     }
   }
+// Checkboxen beim Seitenwechsel zurücksetzen
+  const cb1 = document.getElementById("chkPrivacyAck");
+  const cb2 = document.getElementById("chkPrivacyAck2");
+
+  if (cb1) cb1.checked = false;
+  if (cb2) cb2.checked = false;
+
+  updateAuthButtons();
 }
 
 // -----------------------------
@@ -576,11 +618,21 @@ if (id === "page-14" || id === "page-14-2") {
 // -----------------------------
 
 async function login() {
-  const email = loginUser.value.trim();
-  const pw = loginPass.value;
+  const loginError = document.getElementById("loginError");
 
+  const email = (document.getElementById("loginUser")?.value || "").trim();
+  const pw = (document.getElementById("loginPass")?.value || "");
+
+  // 1) Erst Eingaben prüfen
   if (!email || !pw) {
-    loginError.innerText = "Bitte E-Mail und Passwort eingeben.";
+    if (loginError) loginError.innerText = "Bitte E-Mail und Passwort eingeben.";
+    return;
+  }
+
+  // 2) Dann Datenschutz-Haken prüfen
+  if (!isPrivacyAccepted()) {
+    if (loginError) loginError.innerText =
+      "Bitte bestätigen Sie die Datenschutzerklärung (Haken setzen), um sich anzumelden.";
     return;
   }
 
