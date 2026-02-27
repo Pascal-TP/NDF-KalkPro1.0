@@ -376,10 +376,39 @@ onAuthStateChanged(auth, user => {
   const info = document.getElementById("login-info");
   
   if (user) {
-    // UI
-    actions?.classList.remove("hidden");
-    if (info) info.innerText = "Angemeldet als: " + user.email;
-    updateAdminUI_();
+  actions?.classList.remove("hidden");
+  if (info) info.innerText = "Angemeldet als: " + user.email;
+  updateAdminUI_();
+
+  // ✅ Rolle laden
+  (async () => {
+    try {
+      const u = await loadUserDoc(user.uid);
+
+      // approved check bleibt zusätzlich in login() – hier nur Rolle/Defaults
+      currentUserRole = (u?.role === "employee") ? "employee" : "customer";
+
+      // UI-Listener einmalig binden
+      initCustomerTypeListenersOnce();
+
+      if (currentUserRole === "customer") {
+        // Kunden: immer NDF
+        setCustomerType("ndf");
+        lockCustomerTypeUI(true);
+      } else {
+        // Mitarbeiter: Auswahl erlauben, letzte Wahl wiederherstellen
+        lockCustomerTypeUI(false);
+        const last = localStorage.getItem("customerType");
+        setCustomerType(last === "pj" ? "pj" : "ndf");
+      }
+
+    } catch (e) {
+      console.warn("Rollenlogik Fehler, fallback auf customer/ndf:", e);
+      currentUserRole = "customer";
+      setCustomerType("ndf");
+      lockCustomerTypeUI(true);
+    }
+  })();
 
     // direkt ins Tool (ohne Splash)
     const target = getInitialPage(); // oder dein lastPage-Mechanismus
@@ -403,6 +432,173 @@ onAuthStateChanged(auth, user => {
 })();
 
 const db = getFirestore(fbApp);
+
+// -----------------------------
+// Rollenlogik + Kundenwahl (PJ/NDF)
+// -----------------------------
+let currentUserRole = "customer";   // default sicher
+let currentCustomerType = "ndf";    // "ndf" | "pj"
+
+async function loadUserDoc(uid) {
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+  return snap.exists() ? snap.data() : null;
+}
+
+function setCustomerType(type) {
+  currentCustomerType = (type === "pj") ? "pj" : "ndf";
+  localStorage.setItem("customerType", currentCustomerType);
+
+  const pj = document.getElementById("cust-pj");
+  const ndf = document.getElementById("cust-ndf");
+  if (pj) pj.checked = (currentCustomerType === "pj");
+  if (ndf) ndf.checked = (currentCustomerType === "ndf");
+}
+
+function lockCustomerTypeUI(lock) {
+  const wrap = document.getElementById("customerTypeWrap");
+  const pj = document.getElementById("cust-pj");
+  const ndf = document.getElementById("cust-ndf");
+
+  // UI für Kunden komplett ausblenden:
+  if (wrap) wrap.classList.toggle("hidden", lock);
+
+  // zusätzlich disabled setzen (falls du später statt hidden lieber anzeigen willst)
+  if (pj) pj.disabled = lock;
+  if (ndf) ndf.disabled = lock;
+}
+
+function initCustomerTypeListenersOnce() {
+  const wrap = document.getElementById("customerTypeWrap");
+  if (!wrap || wrap.dataset.bound) return;
+
+  wrap.addEventListener("change", (e) => {
+    const v = e.target?.value;
+    if (v === "pj" || v === "ndf") {
+      // nur Mitarbeiter dürfen ändern
+      if (currentUserRole === "employee") setCustomerType(v);
+    }
+  });
+
+  wrap.dataset.bound = "1";
+}
+
+// überall nutzbar (z.B. für Entfernung/%-Regeln)
+function getCustomerType() {
+  return currentCustomerType; // "ndf" | "pj"
+}
+window.getCustomerType = getCustomerType;
+
+// -----------------------------
+// Baustellen-Adresse (Seite 5) -> PLZ auslesen
+// -----------------------------
+function getBaustellePLZ() {
+  // Passe diese IDs ggf. an deine echten Inputs an:
+  const candidates = [
+    "#baustelle-plz",
+    "#plzBaustelle",
+    "#baustellenPlz",
+    "#plz",                 // falls du es so genannt hast
+    "input[name='baustellePlz']",
+    "input[data-field='baustellePlz']",
+  ];
+
+  for (const sel of candidates) {
+    const el = document.querySelector(sel);
+    if (el && el.value != null) return String(el.value);
+  }
+  return "";
+}
+
+function normalizePLZ(plz) {
+  return String(plz || "").trim().replace(/\D/g, "").padStart(5, "0");
+}
+
+let kmMap = new Map(); // "PLZ" -> number (km)
+
+async function loadKmMap() {
+  // TODO: Pfad anpassen, z.B. "./data/plz_apensen_km.csv"
+  const res = await fetch("./plz_apensen_km.csv");
+  const text = await res.text();
+
+  kmMap.clear();
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+
+  for (const line of lines) {
+    const [plzRaw, kmRaw] = line.split(";").map(s => (s || "").trim());
+    const plz = normalizePLZ(plzRaw);
+    const km = Number(String(kmRaw).replace(",", "."));
+    if (plz && Number.isFinite(km)) kmMap.set(plz, km);
+  }
+}
+
+function getKmToApensenFromPLZ(plz) {
+  const key = normalizePLZ(plz);
+  const km = kmMap.get(key);
+  return Number.isFinite(km) ? km : null;
+}
+
+function applyDistanceFromBaustelle() {
+  const plz = getBaustellePLZ();
+  const km = getKmToApensenFromPLZ(plz);
+
+  // Hier brauchst du 1 Feld / Variable in deinem Kalku-Modell:
+  // Beispiel: window.calcState.distanceKm oder eine Inputbox für km.
+  // Ich mache es absichtlich generisch:
+  const kmInput = document.getElementById("distanceKm"); // falls vorhanden
+
+  if (km != null) {
+    if (kmInput) kmInput.value = String(km);
+    window.distanceKm = km; // fallback, wenn du noch kein State-Objekt hast
+  } else {
+    // wenn PLZ nicht gefunden:
+    // - entweder nichts überschreiben
+    // - oder Hinweis geben
+    // ich mache erstmal nur console:
+    console.warn("Keine km für Baustellen-PLZ gefunden:", plz);
+  }
+
+  // danach deine Kalku neu rechnen lassen (falls du eine Funktion hast)
+  if (typeof window.recalcAll === "function") window.recalcAll();
+}
+
+function bindBaustelleDistanceListenersOnce() {
+  const page5 = document.getElementById("page-5");
+  if (!page5 || page5.dataset.kmBound) return;
+
+  page5.addEventListener("input", (e) => {
+    // Nur reagieren, wenn ein PLZ-Feld betroffen ist
+    const t = e.target;
+    const id = (t?.id || "").toLowerCase();
+    const name = (t?.name || "").toLowerCase();
+    const df = (t?.dataset?.field || "").toLowerCase();
+
+    if (id.includes("plz") || name.includes("plz") || df.includes("plz")) {
+      applyDistanceFromBaustelle();
+    }
+  });
+
+  page5.dataset.kmBound = "1";
+}
+
+
+// -----------------------------
+// Zentrale Kunden-Parameter (PJ/NDF)
+// -----------------------------
+const CUSTOMER_PARAMS = {
+  ndf: {
+    hq: { ort: "Apensen", plz: "21641" },  // NDF Firmensitz
+    marginPct: 0.10,                      // Beispielwert – nach Bedarf
+  },
+  pj: {
+    hq: { ort: "Apensen", plz: "21641" },  // ggf. anderer HQ, wenn PJ abweicht
+    marginPct: 0.00,                      // Beispielwert – nach Bedarf
+  }
+};
+
+function getParams() {
+  return CUSTOMER_PARAMS[getCustomerType()] || CUSTOMER_PARAMS.ndf;
+}
 
 // -----------------------------
 // Datenschutz-Checkbox Gate (Login + Registrierung)
@@ -486,6 +682,7 @@ async function registerRequest() {
     await setDoc(doc(db, "users", cred.user.uid), {
       firma, name, strasse, hausnr, plz, ort, email, tel,
       approved: false,
+      role: "customer",          // ✅ NEU
       createdAt: serverTimestamp()
     });
 
