@@ -891,21 +891,12 @@ async function goWeiterFromPage5() {
   // 3) Zielseite wählen
   const target = loggedIn ? "page-4" : "page-4-5";
 
-  // 4) Fallback, falls page-4-5 noch nicht existiert
-  const targetEl = document.getElementById(target);
-  if (!targetEl) {
-    // wenn nicht eingeloggt und page-4-5 fehlt -> z.B. zurück zur Login-Seite
-    if (!loggedIn) {
-      showPage("page-login");
-      const loginError = document.getElementById("loginError");
-      if (loginError) loginError.innerText = "Bitte zuerst einloggen, um fortzufahren.";
-      return;
-    }
   }
 
   showPage(target);
 }
 window.goWeiterFromPage5 = goWeiterFromPage5;
+
 // -----------------------------
 //  LOGOUT-TIMER
 // -----------------------------
