@@ -1294,27 +1294,28 @@ container.innerHTML += `
     let gesamt = 0;
 
     const seitenConfig = [
-        { key: "page14Data",  csv: "tga4.csv" },
-        { key: "page142Data", csv: "tga5.csv" },
-        { key: "page8Data", csv: "tga10.csv" },
-        { key: "page18Data", csv: "tga8.csv" },
-        { key: "page20Data", csv: "tga9.csv" },
-        { key: "page21Data", csv: "tga7.csv" },
-        { key: "page22Data", csv: "tga11.csv" },
-        { key: "page9Data", csv: "tga3.csv" },
-        { key: "page10Data", csv: "tga6.csv" },
-        { key: "page23Data", csv: "tga1.csv" },
-        { key: "page24Data", csv: "tga2.csv" }
-       { key: "page25Data", csv: "xxx.csv" },
-        { key: "page27Data", csv: "xxx.csv" },
-      { key: "page28Data", csv: "xxx.csv" },
-       { key: "page30Data", csv: "xxx.csv" },
-        { key: "page31Data", csv: "xxx.csv" },
-        { key: "page32Data", csv: "xxx.csv" },
-        { key: "page33Data", csv: "xxx.csv" },
-       { key: "page13Data", csv: "xxx.csv" },
-       { key: "page143Data", csv: "xxx.csv" }
+        { key: "page14Data",  csv: "ndf1.csv" },
+        { key: "page142Data", csv: "ndf5.csv" },
+        { key: "page8Data", csv: "ndf6.csv" },
+        { key: "page18Data", csv: "ndf7.csv" },
+        { key: "page20Data", csv: "ndf8.csv" },
+        { key: "page21Data", csv: "ndf9.csv" },
+        { key: "page22Data", csv: "ndf10.csv" },
+        { key: "page9Data", csv: "ndf11.csv" },
+        { key: "page10Data", csv: "ndf2.csv" },
+        { key: "page23Data", csv: "ndf12.csv" },
+        { key: "page24Data", csv: "ndf13.csv" },
+        { key: "page25Data", csv: "ndf14.csv" },
+        { key: "page27Data", csv: "ndf15.csv" },
+        { key: "page28Data", csv: "ndf16.csv" },
+        { key: "page30Data", csv: "ndf17.csv" },
+        { key: "page31Data", csv: "ndf18.csv" },
+        { key: "page32Data", csv: "ndf19.csv" },
+        { key: "page33Data", csv: "ndf20.csv" },
+        { key: "page13Data", csv: "ndf21.csv" },
+        { key: "page143Data", csv: "ndf3.csv" }
     ];
+
 
     for (const seite of seitenConfig) {
 
