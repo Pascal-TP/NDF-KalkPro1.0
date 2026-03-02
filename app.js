@@ -879,23 +879,33 @@ window.loadAdminPage = loadAdminPage;
 // -----------------------------
 
 async function goWeiterFromPage5() {
-  // Login vorhanden?
+  // 1) Pflichtfelder prüfen
+  if (typeof submitPage5 === "function") {
+    const ok = submitPage5();
+    if (!ok) return;
+  }
+
+  // 2) Login prüfen
   const loggedIn = !!auth.currentUser;
 
-if (typeof submitPage5 === "function") {
-    const ok = submitPage5();
-    if (!ok) return;   // Stoppt hier, wenn etwas fehlt
+  // 3) Zielseite wählen
+  const target = loggedIn ? "page-4" : "page-4-5";
+
+  // 4) Fallback, falls page-4-5 noch nicht existiert
+  const targetEl = document.getElementById(target);
+  if (!targetEl) {
+    // wenn nicht eingeloggt und page-4-5 fehlt -> z.B. zurück zur Login-Seite
+    if (!loggedIn) {
+      showPage("page-login");
+      const loginError = document.getElementById("loginError");
+      if (loginError) loginError.innerText = "Bitte zuerst einloggen, um fortzufahren.";
+      return;
+    }
   }
 
-  if (loggedIn) {
-    showPage("page-4");    // eingeloggt (Kunde oder Mitarbeiter)
-  } else {
-    showPage("page-4-5");  // nicht eingeloggt
-  }
+  showPage(target);
 }
-
-window.goWeiterFromPage5 = goWeiterFromPage5
-
+window.goWeiterFromPage5 = goWeiterFromPage5;
 // -----------------------------
 //  LOGOUT-TIMER
 // -----------------------------
@@ -941,38 +951,36 @@ function getGesamtAngebotssumme() {
 // -----------------------------
 
 function submitPage5() {
-    const fields = [
-        {id: "bv-contact", name: "Kontakt / Ansprechpartner"},
-        {id: "bv-strasse", name: "Straße, Hausnummer"},
-        {id: "bv-ort", name: "PLZ, Ort"},
-        {id: "shk-contact", name: "SHK Ansprechpartner"},
-        {id: "shk-email", name: "SHK E-Mail"},
-        {id: "shk-phone", name: "SHK Telefon-Nr."},
-        {id: "execution-date", name: "Gewünschter Ausführungstermin"},
-        {id: "zeichnung-plaene", name:"Zeichnung / Pläne"}
-    ];
+  const fields = [
+    {id: "bv-contact", name: "Kontakt / Ansprechpartner"},
+    {id: "bv-strasse", name: "Straße, Hausnummer"},
+    {id: "bv-ort", name: "PLZ, Ort"},
+    {id: "shk-contact", name: "SHK Ansprechpartner"},
+    {id: "shk-email", name: "SHK E-Mail"},
+    {id: "shk-phone", name: "SHK Telefon-Nr."},
+    {id: "execution-date", name: "Gewünschter Ausführungstermin"},
+    {id: "zeichnung-plaene", name: "Zeichnung / Pläne"}
+  ];
 
-    let missing = [];
+  const missing = [];
+  for (const f of fields) {
+    const el = document.getElementById(f.id);
+    const val = (el?.value || "").trim();
+    if (!val) missing.push(f.name);
+  }
 
-    fields.forEach(f => {
-        const val = document.getElementById(f.id).value.trim();
-        if (!val) missing.push(f.name);
-    });
+  const errorDiv = document.getElementById("page5-error");
 
-    const errorDiv = document.getElementById("page5-error");
+  if (missing.length > 0) {
+    if (errorDiv) errorDiv.innerText = "Bitte folgende Felder ausfüllen:\n" + missing.join(", ");
+    return false; // ✅ wichtig
+  }
 
-    if (missing.length > 0) {
-        errorDiv.innerText = "Bitte folgende Felder ausfüllen:\n" + missing.join(", ");
-        return;
-    }
+  if (errorDiv) errorDiv.innerText = "";
 
-    errorDiv.innerText = "";
-
-    savePage5Data();
-    
-    showPage("page-4");
+  savePage5Data();
+  return true; // ✅ wichtig
 }
-
 function savePage5Data() {
     const ids = [
         "bv-contact", "bv-strasse", "bv-ort", "shk-contact",
