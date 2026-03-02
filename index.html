@@ -64,11 +64,22 @@
   </div>
 </div>
 
-
+<!-- Seite 0.5: Auswahl-Login -->
+<div class="page" id="page-Auswahl-login">
+    <br>
+    <br>
+    <br>
+    <button onclick="showPage('page-konfig')">Konfigurator</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="showPage('page-login')">Login Kunden</button>
+    <button onclick="showPage('page-login-MA')">Login Mitarbeiter</button>
+</div>
 
 <!-- SEITE 1: LOGIN -->
 <div class="page" id="page-login">
-    <h2>Login</h2>
+    <h2>Login Kunden</h2>
 
     <input id="loginUser" type="email" placeholder="E-Mail">
     <input id="loginPass" type="password" placeholder="Passwort">
@@ -151,6 +162,40 @@
     <div>Lade Daten…</div>
   </div>
 </div>
+
+<!-- SEITE 1.2: LOGIN Mitarbeiter -->
+<div class="page" id="page-login-MA">
+    <h2>Login Mitarbeiter NDF GmbH</h2>
+
+    <input id="loginUser" type="email" placeholder="E-Mail">
+    <input id="loginPass" type="password" placeholder="Passwort">
+
+    <div class="error" id="loginError"></div>
+
+    <div class="ack-row">
+  <label class="ack-label">
+    <input type="checkbox" id="chkPrivacyAck">
+    <span>Ich habe die Datenschutzerklärung zur Kenntnis genommen.</span>
+  </label>
+</div>
+
+    <button id="btnLogin" onclick="login()">Anmelden</button>
+    <button onclick="forgotPassword()">Passwort vergessen</button><br>
+    <br>
+    <br>
+    <br>
+    <p><strong>Noch keine Login-Daten?</strong><br>
+    <button onclick="showPage('page-register')">Hier registrieren</button>
+<br>
+    <br>
+<!-- Buttons/Links zu Datenschutz & Impressum -->
+<div class="legal-links">
+  <a href="#" class="legal-link" onclick="showPage('page-privacy'); return false;">Datenschutzerklärung</a>
+  <span class="legal-sep">|</span>
+  <a href="#" class="legal-link" onclick="showPage('page-imprint'); return false;">Impressum</a>
+</div>
+</div>
+
 
 <!-- SEITE: DATENSCHUTZ -->
 <div class="page" id="page-privacy">
