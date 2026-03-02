@@ -1,0 +1,54 @@
+﻿EDV-Nr./Bezeichnung;Beschreibung;Preiseinheit;Preis
+Titel;Verteiler;;
+Untertitel;Heizkreisverteiler;;
+;- Lieferung und Montage;;
+;- jeder Heizkreisverteiler mit Anschluss-Set;;
+;;;
+H54NO100001;HKV-D 2;€/Stk.;343
+H54NO100501;HKV-D 3;€/Stk.;348,7
+H54NO101001;HKV-D 4;€/Stk.;374,8
+H54NO101501;HKV-D 5;€/Stk.;404
+H54NO102001;HKV-D 6;€/Stk.;431,7
+H54NO102501;HKV-D 7;€/Stk.;455
+H54NO103001;HKV-D 8;€/Stk.;476,3
+H54NO103501;HKV-D 9;€/Stk.;503,1
+H54NO104001;HKV-D 10;€/Stk.;437,4
+H54NO104501;HKV-D 11;€/Stk.;563,8
+H54NO105001;HKV-D 12;€/Stk.;591,3
+;;;
+Untertitel;Verteilerschränke;;
+;- Lieferung und Montage;;
+;;;
+Untertitel;Aufputz;;
+H54NO110001;2 - 3 HK;€/Stk.;268,3
+H54NO110501;4 - 5 HK;€/Stk.;277,4
+H54NO111001;6 - 8 HK;€/Stk.;292,1
+H54NO111501;9 - 11 HK;€/Stk.;305
+H54NO112001;12 HK;€/Stk.;328,8
+;;;
+Untertitel;Unterputz;;
+H54NO120001;2 - 3 HK;€/Stk.;271,2
+H54NO120501;4 - 5 HK;€/Stk.;280,5
+H54NO121001;6 / 8 HK;€/Stk.;295,6
+H54NO121501;9 - 11 HK;€/Stk.;308,3
+H54NO122001;12 HK;€/Stk.;332,9
+;;;
+Untertitel;Lieferung und Montage bei Beauftragung von Verteilermontage:;;
+;;;
+Untertitel;Regelklemmleiste 230 V + 24 V von bis zu 6 Zonen;;
+;- Verbindung von bis zu max. 12 Stellantrieben | Hausmarke;;
+100BIE017;Regelklemmleiste bis zu 6 Zonen;€/Stk.;75,5
+;;;
+Untertitel;Regelklemmleiste 230 V von bis zu 10 Zonen;;
+;- Verbindung von bis zu max. 18 Stellantrieben | Hausmarke;;
+100BIE018;Regelklemmleiste bis zu 10 Zonen;€/Stk.;145,4
+;;;
+Untertitel;Stellantrieb Premium;;
+;- Stromlos geschlossen | Hausmarke;;
+100BIE019;Stellantrieb Premium 230 V 2,5 W;€/Stk.;17,9
+100BIE020;Stellantrieb Premium 24 V;€/Stk.;23,7
+;;;
+Untertitel;Raumthermostat;;
+;- 230 V | Hausmarke;;
+100BIE021;Raumthermostat - Aufputz / Analog;€/Stk.;17,9
+100BIE022;Raumthermostat - LCD-Display Standard;€/Stk.;55,2

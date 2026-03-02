@@ -1,0 +1,26 @@
+﻿EDV-Nr./Bezeichnung;Beschreibung;Preiseinheit;Preis
+Titel;Dienstleistungen für alle Montagearten;;
+;;;
+Untertitel;Vor-Ort-Termin gewünscht (Menge 1 = ja, Menge 0 = nein);Ja(1)/Nein(0);0
+;;;
+Untertitel;Beratungspauschale in der Angebotsphase;;
+;- ausführliche technische Betrachtung;;
+;- Baustellentermin Bauleitung;;
+;- ggf. Höhenprotokoll oder ggf. Probebohrung;;
+H54NO503501;Beratungspauschale;€ pauschal;310
+;;;
+Untertitel;Schnellauslegung;;
+;- inklusive Materialvorschlag;;
+H54NO504701;Schnellauslegung;€/m²;0,4
+;;;
+Untertitel;Heizflächenauslegung (Berechnung für den Hydr. Abgleich);;
+;- inklusive Verlegeplan;;
+H54NO504501;Heizflächenauslegung;€/m²;0,6
+;;;
+Untertitel;Heizlastberechnung nach DIN EN 12831;;
+;- inklusive Heizflächenauslegung;;
+;- Berechnung für den Hydr. Abgleich;;
+H54NO504001;Heizlastberechnung;€/m²;0,9
+;;;
+Untertitel;Änderung in der Berechnung im Nachgang auf Kundenwunsch;;
+H54NO505001;Änderung in der Berechnung;€/Vorgang;93
