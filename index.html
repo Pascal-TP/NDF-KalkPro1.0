@@ -73,13 +73,12 @@
     <br>
     <br>
     <br>
-    <button onclick="showPage('page-login')">Login Kunden</button>
-    <button onclick="showPage('page-login-MA')">Login Mitarbeiter</button>
+    <button onclick="showPage('page-login')">Login Kunden / Mitarbeiter</button>
 </div>
 
 <!-- SEITE 1: LOGIN -->
 <div class="page" id="page-login">
-    <h2>Login Kunden</h2>
+    <h2>Login</h2>
 
     <input id="loginUser" type="email" placeholder="E-Mail">
     <input id="loginPass" type="password" placeholder="Passwort">
@@ -162,40 +161,6 @@
     <div>Lade Daten…</div>
   </div>
 </div>
-
-<!-- SEITE 1.2: LOGIN Mitarbeiter -->
-<div class="page" id="page-login-MA">
-    <h2>Login Mitarbeiter NDF GmbH</h2>
-
-    <input id="loginUser" type="email" placeholder="E-Mail">
-    <input id="loginPass" type="password" placeholder="Passwort">
-
-    <div class="error" id="loginError"></div>
-
-    <div class="ack-row">
-  <label class="ack-label">
-    <input type="checkbox" id="chkPrivacyAck">
-    <span>Ich habe die Datenschutzerklärung zur Kenntnis genommen.</span>
-  </label>
-</div>
-
-    <button id="btnLogin" onclick="login()">Anmelden</button>
-    <button onclick="forgotPassword()">Passwort vergessen</button><br>
-    <br>
-    <br>
-    <br>
-    <p><strong>Noch keine Login-Daten?</strong><br>
-    <button onclick="showPage('page-register')">Hier registrieren</button>
-<br>
-    <br>
-<!-- Buttons/Links zu Datenschutz & Impressum -->
-<div class="legal-links">
-  <a href="#" class="legal-link" onclick="showPage('page-privacy'); return false;">Datenschutzerklärung</a>
-  <span class="legal-sep">|</span>
-  <a href="#" class="legal-link" onclick="showPage('page-imprint'); return false;">Impressum</a>
-</div>
-</div>
-
 
 <!-- SEITE: DATENSCHUTZ -->
 <div class="page" id="page-privacy">
@@ -350,7 +315,7 @@ Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
     <button onclick="showPage('page-3')">Abbrechen</button>
 </div>
 
-<!-- SEITE 3: AUSWAHL -->
+<!-- SEITE 3: AUSWAHL für Mitarbeiter -->
 <div class="page" id="page-3">
     <h2>Bitte auswählen</h2>
 
@@ -387,18 +352,20 @@ Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
 
 </div>
 
-<!-- SEITE 3.1: Info: Der Weg zur Photovoltaikanlage</button -->
+<!-- SEITE 3.1: AUSWAHL für Kunden -->
 <div class="page" id="page-3-1">
-    <h2>Der Weg zur Photovoltaikanlage</h2>
+    <h2>Bitte auswählen</h2>
 
-    <div style="height:90vh; overflow:auto; border:1px solid #ccc;">
-  <iframe
-    src="TGA_Schema.pdf"
-    style="width:100%; height:100%; border:0;"
-  ></iframe>
-</div>
-    <button onclick="showPage('page-3')">Zurück</button>
-</div>
+    <button onclick="showPage('page-4')">KV</button>
+    <button onclick="showPage('page-5')">Anfrage an TGA</button><br>
+    <button onclick="showPage('page-3-1')">Info: Der Weg zur Photovoltaikanlage</button>
+  
+    <p class="hint">
+        KV = Kostenvoranschlag – die schnelle und direkte Ermittlung eines Richtpreises für den Kunden<br><br>
+        Anfrage an TGA – Ermittlung eines Richtpreises für den Kunden, jedoch mit der Möglichkeit ein qualifiziertes Angebot von TGA per Mail anzufragen.<br>
+    </p>
+    
+ </div>
 
 
 <!-- SEITE 4: HAUPTMENÜ -->
@@ -425,7 +392,8 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
 
 <!-- SEITE 5: ANFRAGE AN TGA -->
 <div class="page" id="page-5">
-    <h2>Anfrage an TGA</h2><br>
+    
+    <h2>Angaben zum Projekt</h2><br>
 
     <p class="hint">
         <strong>Bauvorhaben:</strong><br>
@@ -459,71 +427,14 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
     </div>
 
 <p class="hint">
-    <strong>Ausführung - Dachpfanne:</strong><br>
-</p>
-<div class="input-field">
-  <select id="dachpfanne-ausfuehrung">
-    <option value="" selected disabled>Auswahl</option>
-    <option value="Pappdocken">Pappdocken</option>
-    <option value="in Mörtel">in Mörtel</option>
-    <option value="verschraubt">verschraubt</option>
-    <option value="aktueller Standard">aktueller Standard</option>
-    <option value="unbekannt">unbekannt</option>
-  </select>
-</div>
-
-<p class="hint">
-    <strong>Liegen Zeichnungen / Pläne vom Dach vor?</strong><br>
+    <strong>Liegen Zeichnungen / Pläne vor?</strong><br>
     Wenn ja: Bitte hängen Sie die Pläne der E-Mail an.<br>
-    Wenn nein: Alternativ hängen Sie bitte Fotos des ganzen Daches / der gesamten Fläche der E-Mail an.<br>
+    Wenn nein: Alternativ hängen Sie bitte Fotos und Skizzen der E-Mail an.<br>
 </p>
 <div class="input-field">
   <select id="zeichnung-plaene">
     <option value="" selected disabled>Auswahl</option>
     <option value="ja">ja</option>
-    <option value="nein">nein</option>
-  </select>
-</div>
-
-<p class="hint">
-    <strong>Wo befindet sich der Zählerschrank?</strong><br>
-    (Fotos vom geöffneten Zählerschrank der E-Mail bitte anhängen.)<br>
-</p>
-<div class="input-field">
-        <input id="zaehlerschrank" placeholder="Standort Zählerschrank">
-    </div>
-
-<p class="hint">
-   <strong>Nennen Sie bitte den Aufstellungsort von Wechselrichter und Speiher:</strong><br>
-    (Fotos an der E-Mail bitte anhängen.)<br>
-</p>
-<div class="input-field">
-        <input id="wechselrichter_speicher" placeholder="Standort Wechselrichter + Speicher">
-    </div>
-
-<p class="hint">
-    <strong>Aktueller Jahresstrombedarf in kWh:</strong><br>
-</p>
-<div class="input-field">
-        <input id="jahresstrombedarf" placeholder="kWh">
-    </div>
-
-<p class="hint">
-    <strong>Strombedarf Heizsystem in kWh:</strong><br>
-    (bei Umstellung auf Wärmepumpe bitte zusätzlich den voraussichtlichen Strombedarf angeben.)<br>
-</p>
-<div class="input-field">
-        <input id="waermepumpe_strombedarf" placeholder="kWh">
-    </div>
-
-<p class="hint">
-    <strong>Ist eine Wallbox angedacht?</strong><br>
-</p>
-<div class="input-field">
-  <select id="wallbox">
-    <option value="" selected disabled>Auswahl</option>
-    <option value="ja - E-Auto">ja - E-Auto</option>
-    <option value="ja - Plug-in Hybrid">ja - Plug-in Hybrid</option>
     <option value="nein">nein</option>
   </select>
 </div>
@@ -535,6 +446,63 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
         <button onclick="direktZumAngebot()">Eingabe und Direkt zum Angebot</button>
     </div>
 </div>
+
+<!-- SEITE 5.1: Start Konfiguration -->
+<div class="page" id="page-konfig">
+    <h2>Angaben zum Projekt</h2><br>
+
+    <p class="hint">
+        <strong>Bauvorhaben:</strong><br>
+    </p>
+    <div class="input-field">
+        <input id="bv-contact" placeholder="Kontakt / Ansprechpartner">
+    </div>
+    <div class="input-field">
+        <input id="bv-strasse" placeholder="Straße, Hausnummer">
+    </div>
+    <div class="input-field">
+        <input id="bv-ort" placeholder="PLZ, Ort">
+    </div>
+<p class="hint">
+        <strong>Kontakt SHK:</strong><br>
+    </p>
+    <div class="input-field">
+        <input id="shk-contact" placeholder="SHK Ansprechpartner">
+    </div>
+    <div class="input-field">
+        <input id="shk-email" type="email" placeholder="SHK E-Mail">
+    </div>
+    <div class="input-field">
+        <input id="shk-phone" placeholder="SHK Telefon-Nr.">
+    </div>
+<p class="hint">
+        <strong>Gewünschter Ausführungstermin:</strong><br>
+    </p>
+    <div class="input-field">
+        <input id="execution-date" type="date" placeholder="Gewünschter Ausführungstermin">
+    </div>
+
+<p class="hint">
+    <strong>Liegen Zeichnungen / Pläne vor?</strong><br>
+    Wenn ja: Bitte hängen Sie die Pläne der E-Mail an.<br>
+    Wenn nein: Alternativ hängen Sie bitte Fotos und Skizzen der E-Mail an.<br>
+</p>
+<div class="input-field">
+  <select id="zeichnung-plaene">
+    <option value="" selected disabled>Auswahl</option>
+    <option value="ja">ja</option>
+    <option value="nein">nein</option>
+  </select>
+</div>
+
+    <div class="error" id="page5.1-error" style="color:darkred; margin:10px;"></div>
+
+    <div class="button-bar">
+        <button onclick="submitPage5.1()">Eingabe und Weiter</button>
+    </div>
+</div>
+
+
 
 <!-- SEITE 6: MENÜ DC -->
 <div class="page" id="page-6">
