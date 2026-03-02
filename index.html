@@ -69,7 +69,7 @@
     <br>
     <br>
     <br>
-    <button onclick="showPage('page-konfig')">Konfigurator</button>
+    <button onclick="showPage('page-5')">Konfigurator</button>
     <br>
     <br>
     <br>
@@ -335,7 +335,7 @@ Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
 
  </div>
 
-    <button onclick="showPage('page-4')">Konfigurator</button>
+    <button onclick="showPage('page-5')">Konfigurator</button>
     <button id="btnBasisdaten" class="hidden" onclick="showPage('page-4-5')">Basisdaten</button> 
     <br>  
     <br>
@@ -417,67 +417,9 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
     <div class="error" id="page5-error" style="color:darkred; margin:10px;"></div>
 
     <div class="button-bar">
-        <button onclick="submitPage5()">Eingabe und Weiter</button>
-        <button onclick="direktZumAngebot()">Eingabe und Direkt zum Angebot</button>
+        <button onclick="goWeiterFromPage5()">Eingabe und Weiter</button>
     </div>
 </div>
-
-<!-- SEITE 5.1: Start Konfiguration -->
-<div class="page" id="page-konfig">
-    <h2>Angaben zum Projekt</h2><br>
-
-    <p class="hint">
-        <strong>Bauvorhaben:</strong><br>
-    </p>
-    <div class="input-field">
-        <input id="bv-contact" placeholder="Kontakt / Ansprechpartner">
-    </div>
-    <div class="input-field">
-        <input id="bv-strasse" placeholder="Straße, Hausnummer">
-    </div>
-    <div class="input-field">
-        <input id="bv-ort" placeholder="PLZ, Ort">
-    </div>
-<p class="hint">
-        <strong>Kontakt SHK:</strong><br>
-    </p>
-    <div class="input-field">
-        <input id="shk-contact" placeholder="SHK Ansprechpartner">
-    </div>
-    <div class="input-field">
-        <input id="shk-email" type="email" placeholder="SHK E-Mail">
-    </div>
-    <div class="input-field">
-        <input id="shk-phone" placeholder="SHK Telefon-Nr.">
-    </div>
-<p class="hint">
-        <strong>Gewünschter Ausführungstermin:</strong><br>
-    </p>
-    <div class="input-field">
-        <input id="execution-date" type="date" placeholder="Gewünschter Ausführungstermin">
-    </div>
-
-<p class="hint">
-    <strong>Liegen Zeichnungen / Pläne vor?</strong><br>
-    Wenn ja: Bitte hängen Sie die Pläne der E-Mail an.<br>
-    Wenn nein: Alternativ hängen Sie bitte Fotos und Skizzen der E-Mail an.<br>
-</p>
-<div class="input-field">
-  <select id="zeichnung-plaene">
-    <option value="" selected disabled>Auswahl</option>
-    <option value="ja">ja</option>
-    <option value="nein">nein</option>
-  </select>
-</div>
-
-    <div class="error" id="page5.1-error" style="color:darkred; margin:10px;"></div>
-
-    <div class="button-bar">
-        <button onclick="submitPage5.1()">Eingabe und Weiter</button>
-    </div>
-</div>
-
-
 
 <!-- SEITE 6: MENÜ DC -->
 <div class="page" id="page-6">

@@ -874,7 +874,25 @@ async function loadAdminPage() {
 
 window.loadAdminPage = loadAdminPage;
 
+// -----------------------------
+//  Prüfen, ob eingeloggt oder nicht
+// -----------------------------
 
+function goWeiterFromPage5() {
+  // Login vorhanden?
+  const loggedIn = !!auth.currentUser;
+
+if (typeof submitPage5 === "function") {
+    const ok = submitPage5();
+    if (!ok) return;   // Stoppt hier, wenn etwas fehlt
+  }
+
+  if (loggedIn) {
+    showPage("page-4");    // eingeloggt (Kunde oder Mitarbeiter)
+  } else {
+    showPage("page-4-5");  // nicht eingeloggt
+  }
+}
 
 
 
@@ -931,13 +949,7 @@ function submitPage5() {
         {id: "shk-email", name: "SHK E-Mail"},
         {id: "shk-phone", name: "SHK Telefon-Nr."},
         {id: "execution-date", name: "Gewünschter Ausführungstermin"},
-        {id: "dachpfanne-ausfuehrung", name: "Ausführung - Dachpfanne"},
-        {id: "zeichnung-plaene", name:"Zeichnung / Pläne"},
-        {id: "zaehlerschrank", name:"Standort Zählerschrank"},       
-        {id: "wechselrichter_speicher", name:"Standort Wechselrichter + Speicher"},
-        {id: "jahresstrombedarf", name:"Jahresstrombedarf kWh"},
-        {id: "waermepumpe_strombedarf", name:"Wärmepumpe Strombedarf kWh"},
-        {id: "wallbox", name:"Wallbox"}
+        {id: "zeichnung-plaene", name:"Zeichnung / Pläne"}
     ];
 
     let missing = [];
@@ -964,8 +976,7 @@ function submitPage5() {
 function savePage5Data() {
     const ids = [
         "bv-contact", "bv-strasse", "bv-ort", "shk-contact",
-        "shk-email", "shk-phone", "execution-date", "dachpfanne-ausfuehrung", "zeichnung-plaene", "zaehlerschrank", "wechselrichter_speicher", "jahresstrombedarf", "waermepumpe_strombedarf", "wallbox"
-
+        "shk-email", "shk-phone", "execution-date", "zeichnung-plaene"
     ];
 
     const obj = {};
@@ -973,6 +984,7 @@ function savePage5Data() {
 
     localStorage.setItem("page5Data", JSON.stringify(obj));
 }
+
 
 
 // -----------------------------
