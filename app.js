@@ -878,7 +878,7 @@ window.loadAdminPage = loadAdminPage;
 //  Prüfen, ob eingeloggt oder nicht
 // -----------------------------
 
-function goWeiterFromPage5() {
+async function goWeiterFromPage5() {
   // Login vorhanden?
   const loggedIn = !!auth.currentUser;
 
@@ -894,7 +894,7 @@ if (typeof submitPage5 === "function") {
   }
 }
 
-
+window.goWeiterFromPage5 = goWeiterFromPage5
 
 // -----------------------------
 //  LOGOUT-TIMER
