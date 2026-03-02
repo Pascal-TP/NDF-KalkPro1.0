@@ -879,21 +879,18 @@ window.loadAdminPage = loadAdminPage;
 // -----------------------------
 
 async function goWeiterFromPage5() {
-  // 1) Pflichtfelder prüfen
-  if (typeof submitPage5 === "function") {
-    const ok = submitPage5();
-    if (!ok) return;
-  }
+  // 1) Pflichtfelder prüfen + speichern
+  const ok = submitPage5();
+  if (!ok) return;
 
-  // 2) Login prüfen
+  // 2) Routing je nach Login-Status
   const loggedIn = !!auth.currentUser;
 
-  // 3) Zielseite wählen
-  const target = loggedIn ? "page-4" : "page-4-5";
-
+  if (loggedIn) {
+    showPage("page-4");
+  } else {
+    showPage("page-4-5"); // existiert später – bis dahin passiert dann einfach "nichts", wenn die Seite fehlt
   }
-
-  showPage(target);
 }
 window.goWeiterFromPage5 = goWeiterFromPage5;
 
@@ -943,17 +940,18 @@ function getGesamtAngebotssumme() {
 
 function submitPage5() {
   const fields = [
-    {id: "bv-contact", name: "Kontakt / Ansprechpartner"},
-    {id: "bv-strasse", name: "Straße, Hausnummer"},
-    {id: "bv-ort", name: "PLZ, Ort"},
-    {id: "shk-contact", name: "SHK Ansprechpartner"},
-    {id: "shk-email", name: "SHK E-Mail"},
-    {id: "shk-phone", name: "SHK Telefon-Nr."},
-    {id: "execution-date", name: "Gewünschter Ausführungstermin"},
-    {id: "zeichnung-plaene", name: "Zeichnung / Pläne"}
+    { id: "bv-contact", name: "Kontakt / Ansprechpartner" },
+    { id: "bv-strasse", name: "Straße, Hausnummer" },
+    { id: "bv-ort",     name: "PLZ, Ort" },
+    { id: "shk-contact",name: "SHK Ansprechpartner" },
+    { id: "shk-email",  name: "SHK E-Mail" },
+    { id: "shk-phone",  name: "SHK Telefon-Nr." },
+    { id: "execution-date", name: "Gewünschter Ausführungstermin" },
+    { id: "zeichnung-plaene", name: "Zeichnung / Pläne" }
   ];
 
   const missing = [];
+
   for (const f of fields) {
     const el = document.getElementById(f.id);
     const val = (el?.value || "").trim();
@@ -961,17 +959,17 @@ function submitPage5() {
   }
 
   const errorDiv = document.getElementById("page5-error");
-
   if (missing.length > 0) {
     if (errorDiv) errorDiv.innerText = "Bitte folgende Felder ausfüllen:\n" + missing.join(", ");
-    return false; // ✅ wichtig
+    return false;
   }
 
   if (errorDiv) errorDiv.innerText = "";
 
   savePage5Data();
-  return true; // ✅ wichtig
+  return true;
 }
+
 function savePage5Data() {
     const ids = [
         "bv-contact", "bv-strasse", "bv-ort", "shk-contact",
