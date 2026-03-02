@@ -28,10 +28,7 @@ function resetStoredInputsOnReload() {
 
   if (!isReload) return;
 
-    // Flow-State ebenfalls löschen
-  clearKomplettFlow();
-
-  // Nur deine Eingabe-/Angebotsdaten löschen (Auth bleibt erhalten!)
+      // Nur deine Eingabe-/Angebotsdaten löschen (Auth bleibt erhalten!)
   const keysToRemove = [
     "page5Data",
     "angebotTyp",
@@ -1266,8 +1263,7 @@ function sendMailPage40() {
 function clearInputs() {
 
 optimiererVerwendet = false;
-  clearKomplettFlow();
-
+  
 
 // localStorage komplett löschen
     localStorage.clear();
