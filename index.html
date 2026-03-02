@@ -13,7 +13,7 @@
 <img src="logo.png" class="logo">
 
 <!-- Countdown -->
-<div id="release-info">Release: V1.0.1</div>
+<div id="release-info">Release: V1.0.7</div>
 <div id="timer">Logout in: 10:00</div>
 
 <!-- NEU: Angemeldet als -->
@@ -61,20 +61,11 @@
   <div class="start-slogan">
     Flächenheizsystem - Estrich - Parkett und Bodenbelag<br><br>
     Wir schaffen das passende Klima und die richtige Temperatur für Ihr Zuhause
+
   </div>
 </div>
 
-<!-- Seite 0.5: Auswahl-Login -->
-<div class="page" id="page-Auswahl-login">
-    <br>
-    <br>
-    <br>
-    <button onclick="showPage('page-5')">Konfigurator</button>
-    <br>
-    <br>
-    <br>
-    <button onclick="showPage('page-login')">Login Kunden / Mitarbeiter</button>
-</div>
+
 
 <!-- SEITE 1: LOGIN -->
 <div class="page" id="page-login">
@@ -83,9 +74,9 @@
     <input id="loginUser" type="email" placeholder="E-Mail">
     <input id="loginPass" type="password" placeholder="Passwort">
 
-    <div class="error" id="loginError"></div>
+    <div class="error" id="loginError"></div><br>
 
-    <div class="ack-row">
+<div class="ack-row">
   <label class="ack-label">
     <input type="checkbox" id="chkPrivacyAck">
     <span>Ich habe die Datenschutzerklärung zur Kenntnis genommen.</span>
@@ -110,6 +101,7 @@
 </div>
 
 
+
 <!-- SEITE 1.1 Registrierung:  -->
 <div id="page-register" class="page">
   <h2>Registrierung</h2>
@@ -125,7 +117,7 @@
 
   <div id="reg-error" style="color:red; margin-top:8px;"></div>
   <div id="reg-info" style="color:green; margin-top:8px;"></div><br>
-<br> 
+
 <p>Wir prüfen Ihre Angaben und Sie erhalten innerhalb<br>von 24h eine System-E-Mail für Ihre Passwortvergabe.<br>(Schauen Sie auch in Ihrem Spam-Ordner.)</p>
 <br> 
  
@@ -146,7 +138,6 @@
   <a href="#" class="legal-link" onclick="showPage('page-imprint'); return false;">Impressum</a>
 </div>
   </div>
-
 
 <!-- SEITE 1.1 Registrierung:  -->
 <div id="page-admin" class="page">
@@ -245,6 +236,7 @@ Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht 
 Stand: 27.02.2026<br><br>
   </div>
 
+
   <div class="button-bar">
     <button onclick="showPage('page-login')">Zurück zum Login</button>
   </div>
@@ -293,6 +285,7 @@ Verbraucher­streit­beilegung/Universal­schlichtungs­stelle:<br>
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.<br>
   </div>
 
+
   <div class="button-bar">
     <button onclick="showPage('page-login')">Zurück zum Login</button>
   </div>
@@ -315,35 +308,37 @@ Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
     <button onclick="showPage('page-3')">Abbrechen</button>
 </div>
 
-<!-- SEITE 3: AUSWAHL für Mitarbeiter -->
+<!-- SEITE 3: AUSWAHL -->
 <div class="page" id="page-3">
     <h2>Bitte auswählen</h2>
 
-<!-- Kundenwahl (nur für Mitarbeiter sichtbar) -->
-<div id="customerTypeWrap" class="box hidden" style="max-width:520px; margin: 10px auto; text-align:left;">
-  <div style="font-weight:700; margin-bottom:8px;">Kalkulation für:</div>
-
-  <label style="display:block; margin:6px 0;">
-    <input type="radio" name="customerType" id="cust-ndf" value="ndf">
-    NDF
-  </label>
-
-  <label style="display:block; margin:6px 0;">
-    <input type="radio" name="customerType" id="cust-pj" value="pj">
-    Peter Jensen
-  </label>
-
- </div>
-
-    <button onclick="showPage('page-5')">Konfigurator</button>
-    <button id="btnBasisdaten" class="hidden" onclick="showPage('page-4-4')">Basisdaten</button> 
-    <br>  
-    <br>
-    <br>
+    <button onclick="showPage('page-4')">KV</button>
+    <button onclick="showPage('page-5')">Anfrage an TGA</button><br>
+    <button onclick="showPage('page-3-1')">Info: Der Weg zur Photovoltaikanlage</button>
+  
+    <p class="hint">
+        KV = Kostenvoranschlag – die schnelle und direkte Ermittlung eines Richtpreises für den Kunden<br><br>
+        Anfrage an TGA – Ermittlung eines Richtpreises für den Kunden, jedoch mit der Möglichkeit ein qualifiziertes Angebot von TGA per Mail anzufragen.<br>
+    </p>
+    
     <button id="btnExportLog" class="hidden" onclick="exportLoginLog()">Login-Log herunterladen</button>
     <button id="btnAdmin" class="hidden" onclick="showPage('page-admin')">Adminbereich</button>
 
 </div>
+
+<!-- SEITE 3.1: Info: Der Weg zur Photovoltaikanlage</button -->
+<div class="page" id="page-3-1">
+    <h2>Der Weg zur Photovoltaikanlage</h2>
+
+    <div style="height:90vh; overflow:auto; border:1px solid #ccc;">
+  <iframe
+    src="TGA_Schema.pdf"
+    style="width:100%; height:100%; border:0;"
+  ></iframe>
+</div>
+    <button onclick="showPage('page-3')">Zurück</button>
+</div>
+
 
 <!-- SEITE 4: HAUPTMENÜ -->
 <div class="page" id="page-4">
@@ -362,13 +357,14 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
 <br>
     <button onclick="showPage('page-14-1')">Downloadbereich</button>
 <br>
-<br>    
+<br>
+    <button onclick="showPage('page-3')">Zurück zur Auswahl "KV oder Anfrage"</button>
+
 </div>
 
-<!-- SEITE 5: Angaben zum Projekt -->
+<!-- SEITE 5: ANFRAGE AN TGA -->
 <div class="page" id="page-5">
-    
-    <h2>Angaben zum Projekt</h2><br>
+    <h2>Anfrage an TGA</h2><br>
 
     <p class="hint">
         <strong>Bauvorhaben:</strong><br>
@@ -417,7 +413,8 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
     <div class="error" id="page5-error" style="color:darkred; margin:10px;"></div>
 
     <div class="button-bar">
-        <button onclick="goWeiterFromPage5()">Eingabe und Weiter</button>
+        <button onclick="submitPage5()">Eingabe und Weiter</button>
+        <button onclick="direktZumAngebot()">Eingabe und Direkt zum Angebot</button>
     </div>
 </div>
 
@@ -464,14 +461,13 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
 
     <div class="button-bar">
         <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
-        <button id="btnWeiter14Normal" onclick="showPage('page-10')">Weiter</button>
+        <button id="btnWeiter21Normal" onclick="direktZumAngebot()">Direkt zum Angebot</button>
         <button
           id="btnWeiter14Komplett"
           class="btn-komplett hidden"
-          onclick="showPage('page-10')">Weiter</button>
+          onclick="showPage('page-18')">Weiter</button>
 
-        <button onclick="direktZumAngebot()">Direkt zum Angebot</button>
-    </div>
+      </div>
 </div>
 
 <!-- SEITE 14.1: Downloadbereich -->
@@ -680,8 +676,8 @@ Sie können die Konfiguration jederzeit an beliebiger Stelle fortsetzen.</p>
 
 <!-- SEITE 21: Zubehör -->
 <div class="page" id="page-21">
-    <h2>Zubehör</h2>
-
+    <h2>Zubehör</h2><br>
+<strong style="color: red;">Hinweis: Notstrom-Optionen sind erst ab 6 kW verfügbar.</strong><br>
     <div id="content-21" class="price-table"></div>
 
     <div class="button-bar">
