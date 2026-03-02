@@ -109,16 +109,13 @@ const auth = getAuth(fbApp);
 const app = document.getElementById("app");
 
 onAuthStateChanged(auth, async (user) => {
-
   const actions = document.getElementById("user-actions");
   const info = document.getElementById("login-info");
 
   if (user) {
-
     actions?.classList.remove("hidden");
     if (info) info.innerText = "Angemeldet als: " + user.email;
 
-    // 🔹 Rolle aus Firestore laden
     try {
       const u = await loadUserDoc(user.uid);
       currentUserRole = (u?.role === "employee") ? "employee" : "customer";
@@ -127,63 +124,35 @@ onAuthStateChanged(auth, async (user) => {
       currentUserRole = "customer";
     }
 
-    // 🔹 Jetzt erst UI aktualisieren
-    updateAdminUI_();
-
-  } else {
-    actions?.classList.add("hidden");
-    currentUserRole = "customer";
-  }
-
-});
-
-  // ✅ Rolle laden
-  (async () => {
-    try {
-      const u = await loadUserDoc(user.uid);
-
-      // approved check bleibt zusätzlich in login() – hier nur Rolle/Defaults
-      currentUserRole = (u?.role === "employee") ? "employee" : "customer";
-
-      // UI-Listener einmalig binden
-      initCustomerTypeListenersOnce();
-
-      if (currentUserRole === "customer") {
-        // Kunden: immer NDF
-        setCustomerType("ndf");
-        lockCustomerTypeUI(true);
-      } else {
-        // Mitarbeiter: Auswahl erlauben, letzte Wahl wiederherstellen
-        lockCustomerTypeUI(false);
-        const last = localStorage.getItem("customerType");
-        setCustomerType(last === "pj" ? "pj" : "ndf");
-      }
-
-    } catch (e) {
-      console.warn("Rollenlogik Fehler, fallback auf customer/ndf:", e);
-      currentUserRole = "customer";
+    // PJ/NDF UI (optional)
+    initCustomerTypeListenersOnce();
+    if (currentUserRole === "customer") {
       setCustomerType("ndf");
       lockCustomerTypeUI(true);
+    } else {
+      lockCustomerTypeUI(false);
+      const last = localStorage.getItem("customerType");
+      setCustomerType(last === "pj" ? "pj" : "ndf");
     }
-  })();
 
-    // direkt ins Tool (ohne Splash)
-    const target = getInitialPage(); // oder dein lastPage-Mechanismus
+    // Buttons (Admin + Mitarbeiter)
+    updateAdminUI_();
+
+    const target = getInitialPage();
     history.replaceState({ page: target }, "", "#" + target);
     showPage(target, true);
 
   } else {
-    // UI
     actions?.classList.add("hidden");
     if (info) info.innerText = "";
+
+    currentUserRole = "customer";
     updateAdminUI_();
 
-    // Splash zeigen und dann zum Login
     showPage("page-start", true);
     startSplashScreen();
   }
 
-  // App sichtbar machen
   app?.classList.remove("hidden");
 });
 })();
