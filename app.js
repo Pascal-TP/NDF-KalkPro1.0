@@ -106,16 +106,36 @@ const auth = getAuth(fbApp);
   // await signOut(auth);
 
   // 3) Listener erst DANACH
-const app = document.getElementById("app");  
-onAuthStateChanged(auth, user => {
+const app = document.getElementById("app");
+
+onAuthStateChanged(auth, async (user) => {
 
   const actions = document.getElementById("user-actions");
   const info = document.getElementById("login-info");
-  
+
   if (user) {
-  actions?.classList.remove("hidden");
-  if (info) info.innerText = "Angemeldet als: " + user.email;
-  updateAdminUI_();
+
+    actions?.classList.remove("hidden");
+    if (info) info.innerText = "Angemeldet als: " + user.email;
+
+    // 🔹 Rolle aus Firestore laden
+    try {
+      const u = await loadUserDoc(user.uid);
+      currentUserRole = (u?.role === "employee") ? "employee" : "customer";
+    } catch (e) {
+      console.warn("Rolle konnte nicht geladen werden:", e);
+      currentUserRole = "customer";
+    }
+
+    // 🔹 Jetzt erst UI aktualisieren
+    updateAdminUI_();
+
+  } else {
+    actions?.classList.add("hidden");
+    currentUserRole = "customer";
+  }
+
+});
 
   // ✅ Rolle laden
   (async () => {
@@ -791,21 +811,40 @@ window.loadPendingUsers = loadPendingUsers;
 window.approveUser = approveUser;
 
 
-// -----------------------------
-// LOGBUCH - NUR FÜR ADMIN
-// -----------------------------
-
-
-
 function updateAdminUI_() {
   const adminEmail = "pascal.gasch@tpholding.de";
-  const isAdmin = (auth.currentUser?.email || "").toLowerCase() === adminEmail.toLowerCase();
+  const userEmail = (auth.currentUser?.email || "").toLowerCase();
 
-  const btn = document.getElementById("btnExportLog");
-  if (btn) btn.classList.toggle("hidden", !isAdmin);
+  const isAdmin = userEmail === adminEmail.toLowerCase();
+  const isEmployee = (typeof currentUserRole !== "undefined" && currentUserRole === "employee");
 
+  // -----------------------------
+  // btnBasisdaten
+  // sichtbar für Admin ODER Mitarbeiter
+  // -----------------------------
+  const btnBasis = document.getElementById("btnBasisdaten");
+  if (btnBasis) {
+    const showBasis = isAdmin || isEmployee;
+    btnBasis.classList.toggle("hidden", !showBasis);
+  }
+
+  // -----------------------------
+  // btnExportLog
+  // nur Admin
+  // -----------------------------
+  const btnExport = document.getElementById("btnExportLog");
+  if (btnExport) {
+    btnExport.classList.toggle("hidden", !isAdmin);
+  }
+
+  // -----------------------------
+  // btnAdmin
+  // nur Admin
+  // -----------------------------
   const btnAdmin = document.getElementById("btnAdmin");
-  if (btnAdmin) btnAdmin.classList.toggle("hidden", !isAdmin);
+  if (btnAdmin) {
+    btnAdmin.classList.toggle("hidden", !isAdmin);
+  }
 }
 
 // -----------------------------
