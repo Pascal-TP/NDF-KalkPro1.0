@@ -1,7 +1,9 @@
 let currentUser = null;
 let logoutTimer;
 let remaining = 600;
-let optimiererVerwendet = false;
+//let optimiererVerwendet = false;
+let fraesenHinweisGezeigt = false;
+let fraesenVerwendet = false;
 let page40Promise = null;
 
 // -----------------------------
