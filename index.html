@@ -51,6 +51,13 @@
     <option value="nav:page-18">Unterdämmung</option>
     </optgroup>
     
+    <optgroup label="Bodenbeläge">
+    <option value="nav:page-35">Parkett</option>
+    <option value="nav:page-36">Designbelag</option>
+    <option value="nav:page-37">Teppichboden</option>
+    <option value="nav:page-38">Parkett schleifen</option>
+    </optgroup>
+
     <option value="nav:page-20">➡️ Verteiler & Regeltechnik</option>
     <option value="nav:page-21">➡️ Dienstleistung</option>
 <!--     <option value="nav:page-22">➡️ Zuschläge</option>  -->
@@ -417,7 +424,8 @@ Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
         <button onclick="showPage('page-8')">Fräsen</button><br>
         <button onclick="showPage('page-9')">Estrich / ThermoWhite®</button><br>
 <!--         <button onclick="showPage('page-10')">Klett 3mm</button><br>  -->
-        <button onclick="showPage('page-11')">Trockenbau</button>
+        <button onclick="showPage('page-11')">Trockenbau</button><br>
+        <button onclick="showPage('page-34')">Bodenbeläge</button>
     </div>
 
     <!-- Navigationsbuttons nebeneinander -->
@@ -439,7 +447,9 @@ Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
         <button onclick="showPage('page-26')">Klettsystem</button><br>
         <button onclick="showPage('page-29')">Noppensystem</button><br>
         <button onclick="showPage('page-33')">Industrieboden</button><br>
-	<button onclick="showPage('page-18')">Unterdämmung</button>
+	<button onclick="showPage('page-18')">Unterdämmung</button><br>
+        <button onclick="showPage('page-34')">Bodenbeläge</button>
+
     </div>
 
     <!-- Navigationsbuttons nebeneinander -->
@@ -817,6 +827,72 @@ Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
     <div class="button-bar">
         <button onclick="showPage('page-7')">Zurück zum Hauptmenü Neubau</button>
         <button onclick="showPage('page-18')">Weiter</button>
+        <button onclick="direktZumAngebot()">Direkt zum Angebot</button>
+    </div>
+</div>
+
+<!-- SEITE 34: MENÜ Bodenbeläge -->
+<div class="page" id="page-34">
+    <h2>Menü Bodenbeläge</h2>
+
+    <!-- Auswahlbuttons untereinander -->
+    <div>
+        <button onclick="showPage('page-35')">Parkett</button><br>
+        <button onclick="showPage('page-36')">Designbelag</button><br>
+        <button onclick="showPage('page-37')">Teppichboden</button><br>
+        <button onclick="showPage('page-38')">Parkett schleifen</button>
+    </div>
+
+    <!-- Navigationsbuttons nebeneinander -->
+    <div style="margin-top:40px;">
+        <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
+    </div>
+</div>
+
+<!-- SEITE 35: Parkett -->
+<div class="page" id="page-35">
+    <h2>Parkett</h2>
+
+    <div id="content-35" class="price-table"></div>
+
+    <div class="button-bar">
+        <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
+        <button onclick="direktZumAngebot()">Direkt zum Angebot</button>
+    </div>
+</div>
+
+<!-- SEITE 36: Designbelag -->
+<div class="page" id="page-36">
+    <h2>Designbelag</h2>
+
+    <div id="content-36" class="price-table"></div>
+
+    <div class="button-bar">
+        <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
+        <button onclick="direktZumAngebot()">Direkt zum Angebot</button>
+    </div>
+</div>
+
+<!-- SEITE 37: Teppichboden -->
+<div class="page" id="page-37">
+    <h2>Teppichboden</h2>
+
+    <div id="content-37" class="price-table"></div>
+
+    <div class="button-bar">
+        <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
+        <button onclick="direktZumAngebot()">Direkt zum Angebot</button>
+    </div>
+</div>
+
+<!-- SEITE 38: Parkett schleifen -->
+<div class="page" id="page-38">
+    <h2>Parkett schleifen</h2>
+
+    <div id="content-38" class="price-table"></div>
+
+    <div class="button-bar">
+        <button onclick="showPage('page-4')">Zurück zum Hauptmenü</button>
         <button onclick="direktZumAngebot()">Direkt zum Angebot</button>
     </div>
 </div>
