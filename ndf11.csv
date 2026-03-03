@@ -1,19 +1,25 @@
 ﻿EDV-Nr./Bezeichnung;Beschreibung;Preiseinheit;Preis
 Titel;Estrich;;
-Untertitel;Heizestrich;;
-;Zement Heizestrich CT-C25-F4, s=65-70 mm mit mindestens 45 mm Rohrüberdeckung, gemäß der DIN 18560 Teil 1+2 und der DIN EN 13813, einschichtig Herstellen und mit der Ebenheit nach DIN 18202 Tabelle 3 Zeile 3, liefern und einbauen;;
+Untertitel;Heizestrich (Lieferung und Einbau);;
+;Zement Heizestrich CT-C25-F4, s=65-70 mm mit mindestens 45 mm Rohrüberdeckung, gemäß der DIN 18560 Teil 1+2 und der DIN EN 13813, einschichtig Herstellen und mit der Ebenheit nach DIN 18202 Tabelle 3 Zeile 3;;
 ;;;
-H54NO050001;Flächen von 10 bis 69 m²;€ pauschal;2691
-H54NO050501;Flächen von 70 bis 109 m²;€ pauschal;2808
-H54NO051001;Flächen von 110 bis 119 m²;€/m²;27,1
-H54NO051501;Flächen von 120 bis 129 m²;€/m²;26
-H54NO052001;Flächen von 130 bis 139 m²;€/m²;24,9
-H54NO052501;Flächen von 140 bis 149 m²;€/m²;23,8
-100BIE023;Flächen ab 150 m²;€/m²;23,5
+;Flächen von 10 bis 69 m²;€ pauschal;1900
+;Flächen von 70 bis 109 m²;€ pauschal;2150
+;Flächen von 110 bis 119 m²;€/m²;19,6
+;Flächen von 120 bis 129 m²;€/m²;18
+;Flächen ab 150 m²;€/m²;17,2
 ;;;
 Untertitel;Zulagen Zusatzmittel:;;
-H54NO055501;Einbringung Polyprophylenfasern;€/m²;2,5
-H54NO056001;Zulage Schnellbinder 18-20 Tage;€/m²;5,8
-H54NO056501;Zulage Schnellbinder 10-14 Tage;€/m²;7,4
-H54NO057001;Zulage Schnellbinder 5- 7 Tage;€/m²;9,7
-H54NO057501;Retanol XTREME 3 - 7 Tage;€/m²;15
+;Einbringung Polyprophylenfasern;€/m²;2,1
+;Zulage Schnellbinder 18-20 Tage;€/m²;4,95
+;Zulage Schnellbinder 10-14 Tage;€/m²;6,35
+;Zulage Schnellbinder 5- 7 Tage;€/m²;8,25
+;Retanol XTREME 3 - 7 Tage;€/m²;12,8
+;Retanol XThinn;€/m²;17,8
+;;;
+Titel;ThermoWhite®;;
+;Die Mineralisch gebundene Dämmschüttung mit guter Dämmeigenschaft wird mittels vollautomatischer und computergesteuerten Maschinentechnik verteilt. Die fugenlose Verlegung trocknet schnell, ist belastbar und nachhaltig.;;
+;;;
+;ThermoWhite® WD 70 R/N bis 10 m³;€ pauschal;2200
+;ThermoWhite® WD 70 R/N ab 11 m³ jeder weitere m³;€/m³;175
+;Baustelleneinrichtung Thermowhite MixMobil;€ pauschal;245

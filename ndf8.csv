@@ -3,52 +3,56 @@ Titel;Verteiler;;
 Untertitel;Heizkreisverteiler;;
 ;- Lieferung und Montage;;
 ;- jeder Heizkreisverteiler mit Anschluss-Set;;
+;- Inkl. Übermittlung mit einer vollständigen Dokumentation (Verteilerbeschriftung, Anzahl der Heizkreise, digitales Abdrückprotokoll, Lieferung der Einstellwerte, Fotodokumentation);;
+;- Die Individuellen Verteilerschränke werden nach Kundenwunsch und gem. Ausführungsplanung vorgefertigt, geliefert und montiert.   ;;
+;- Der Anschluss der Regeltechnik erfolgt bauseits.;;
+;- Auf Wunsch stellen wir Ihnen bereits komplett vormontierte Heizkreisverteiler aus Edelstahl zur Verfügung. Die Verdrahtung erfolgt auf der Baustelle. Sprechen Sie uns gerne an. Wir machen Ihnen ein passendes Angebot. ;;
 ;;;
-H54NO100001;HKV-D 2;€/Stk.;343
-H54NO100501;HKV-D 3;€/Stk.;348,7
-H54NO101001;HKV-D 4;€/Stk.;374,8
-H54NO101501;HKV-D 5;€/Stk.;404
-H54NO102001;HKV-D 6;€/Stk.;431,7
-H54NO102501;HKV-D 7;€/Stk.;455
-H54NO103001;HKV-D 8;€/Stk.;476,3
-H54NO103501;HKV-D 9;€/Stk.;503,1
-H54NO104001;HKV-D 10;€/Stk.;437,4
-H54NO104501;HKV-D 11;€/Stk.;563,8
-H54NO105001;HKV-D 12;€/Stk.;591,3
+;HKV-D 2;€/Stk.;106,92
+;HKV-D 3;€/Stk.;123,09
+;HKV-D 4;€/Stk.;140,28
+;HKV-D 5;€/Stk.;159,52
+;HKV-D 6;€/Stk.;177,85
+;HKV-D 7;€/Stk.;193,14
+;HKV-D 8;€/Stk.;207,2
+;HKV-D 9;€/Stk.;224,87
+;HKV-D 10;€/Stk.;247,5
+;HKV-D 11;€/Stk.;264,93
+;HKV-D 12;€/Stk.;283,04
 ;;;
 Untertitel;Verteilerschränke;;
 ;- Lieferung und Montage;;
 ;;;
 Untertitel;Aufputz;;
-H54NO110001;2 - 3 HK;€/Stk.;268,3
-H54NO110501;4 - 5 HK;€/Stk.;277,4
-H54NO111001;6 - 8 HK;€/Stk.;292,1
-H54NO111501;9 - 11 HK;€/Stk.;305
-H54NO112001;12 HK;€/Stk.;328,8
+;2 - 3 HK - Aufputz;€/Stk.;101,23
+;4 - 5 HK - Aufputz;€/Stk.;107,22
+;6 - 8 HK - Aufputz;€/Stk.;116,89
+;9 - 11 HK - Aufputz;€/Stk.;125,43
+;12 HK - Aufputz;€/Stk.;141,08
 ;;;
 Untertitel;Unterputz;;
-H54NO120001;2 - 3 HK;€/Stk.;271,2
-H54NO120501;4 - 5 HK;€/Stk.;280,5
-H54NO121001;6 / 8 HK;€/Stk.;295,6
-H54NO121501;9 - 11 HK;€/Stk.;308,3
-H54NO122001;12 HK;€/Stk.;332,9
+;2 - 3 HK - Unterputz;€/Stk.;103,09
+;4 - 5 HK - Unterputz;€/Stk.;109,24
+;6 / 8 HK - Unterputz;€/Stk.;119,2
+;9 - 11 HK - Unterputz;€/Stk.;128,03
+;12 HK - Unterputz;€/Stk.;144,14
 ;;;
-Untertitel;Lieferung und Montage bei Beauftragung von Verteilermontage:;;
+Untertitel;Nur Lieferung auf Kundenwunsch:;;
 ;;;
 Untertitel;Regelklemmleiste 230 V + 24 V von bis zu 6 Zonen;;
 ;- Verbindung von bis zu max. 12 Stellantrieben | Hausmarke;;
-100BIE017;Regelklemmleiste bis zu 6 Zonen;€/Stk.;75,5
+;Regelklemmleiste bis zu 6 Zonen;€/Stk.;49,72
 ;;;
 Untertitel;Regelklemmleiste 230 V von bis zu 10 Zonen;;
 ;- Verbindung von bis zu max. 18 Stellantrieben | Hausmarke;;
-100BIE018;Regelklemmleiste bis zu 10 Zonen;€/Stk.;145,4
+;Regelklemmleiste bis zu 10 Zonen;€/Stk.;95,76
 ;;;
 Untertitel;Stellantrieb Premium;;
 ;- Stromlos geschlossen | Hausmarke;;
-100BIE019;Stellantrieb Premium 230 V 2,5 W;€/Stk.;17,9
-100BIE020;Stellantrieb Premium 24 V;€/Stk.;23,7
+;Stellantrieb Premium 230 V 2,5 W;€/Stk.;10,7
+;Stellantrieb Premium 24 V;€/Stk.;10,7
 ;;;
 Untertitel;Raumthermostat;;
 ;- 230 V | Hausmarke;;
-100BIE021;Raumthermostat - Aufputz / Analog;€/Stk.;17,9
-100BIE022;Raumthermostat - LCD-Display Standard;€/Stk.;55,2
+;Raumthermostat - Aufputz / Analog;€/Stk.;11,98
+;Raumthermostat - LCD-Display Standard;€/Stk.;37,45
