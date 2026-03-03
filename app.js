@@ -2487,7 +2487,7 @@ function berechneGesamt22() {
 }
 
 		// -----------------------------
-		// SEITE 9 – Estrich (ndf11.csv)
+		// SEITE 9 – Estrich / ThermoWhite® (ndf11.csv)
 		// -----------------------------
 
 function loadPage9() {
