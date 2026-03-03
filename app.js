@@ -159,6 +159,7 @@ function resetStoredInputsOnReload() {
 
     "page14Data",
     "page142Data",
+    "page143Data",
     "page8Data",
     "page18Data",
     "page20Data",
@@ -167,7 +168,15 @@ function resetStoredInputsOnReload() {
     "page9Data",
     "page10Data",
     "page23Data",
-    "page24Data"
+    "page24Data",
+    "page25Data",
+    "page27Data",
+    "page28Data",
+    "page30Data",
+    "page31Data",
+    "page32Data",
+    "page33Data",
+    "page13Data"
   ];
 
   keysToRemove.forEach(k => localStorage.removeItem(k));
@@ -466,7 +475,7 @@ if (id === "page-14" || id === "page-14-2") {
 }
 
     if (id === "page-14") loadPage14();
-  //if (id === "page-14-3") loadPage143();
+  if (id === "page-14-3") loadPage143();
   if (id === "page-14-2") loadPage142();
   if (id === "page-8") loadPage8();
   if (id === "page-18") loadPage18();
@@ -477,15 +486,16 @@ if (id === "page-14" || id === "page-14-2") {
   if (id === "page-10") loadPage10();
   if (id === "page-23") loadPage23();
   if (id === "page-24") loadPage24();
-  //if (id === "page-25") loadPage25();
-  //if (id === "page-27") loadPage27();
-  //if (id === "page-28") loadPage28();
-  //if (id === "page-30") loadPage30();
-  //if (id === "page-31") loadPage31();
-  //if (id === "page-32") loadPage32();
-  //if (id === "page-33") loadPage33();
-  //if (id === "page-13") loadPage13();
-    if (id === "page-admin") loadAdminPage();
+  if (id === "page-25") loadPage25();
+  if (id === "page-25") loadPage25();
+  if (id === "page-27") loadPage27();
+  if (id === "page-28") loadPage28();
+  if (id === "page-30") loadPage30();
+  if (id === "page-31") loadPage31();
+  if (id === "page-32") loadPage32();
+  if (id === "page-33") loadPage33();
+  if (id === "page-13") loadPage13();
+  if (id === "page-admin") loadAdminPage();
 
   applyFlowUI(id);
   
@@ -734,8 +744,6 @@ window.approveUser = approveUser;
 // LOGBUCH - NUR FÜR ADMIN
 // -----------------------------
 
-
-
 function updateAdminUI_() {
   const adminEmail = "pascal.gasch@tpholding.de";
   const isAdmin = (auth.currentUser?.email || "").toLowerCase() === adminEmail.toLowerCase();
@@ -804,10 +812,6 @@ async function loadAdminPage() {
 }
 
 window.loadAdminPage = loadAdminPage;
-
-
-
-
 
 // -----------------------------
 //  LOGOUT-TIMER
@@ -930,7 +934,7 @@ function savePage5Data() {
     localStorage.setItem("page5Data", JSON.stringify(obj));
 }
 
-	// -----------------------------
+        // -----------------------------
 		// SEITE 14 – Tackersystem Hausmarke (ndf1.csv)
 		// -----------------------------
 
@@ -1075,7 +1079,7 @@ function berechneGesamt14() {
     }
 }
 
-	// -----------------------------
+	    // -----------------------------
 		// SEITE 14.3 – Tackersystem ROTH (ndf3.csv)
 		// -----------------------------
 
@@ -1370,7 +1374,6 @@ container.innerHTML += `
  	 fraesenHinweis.style.display = fraesenVerwendet ? "block" : "none";
 	}
  
-
     const angebotspreisEl = document.getElementById("angebotspreis");
     if (angebotspreisEl) {
         angebotspreisEl.innerText =
@@ -1379,9 +1382,9 @@ container.innerHTML += `
 
 // refreshRabattDisplays();
 
-// Hinweise laden (tga12.csv)
+// Hinweise laden (ndf4.csv)
     try {
-        const hinweisRes = await fetch("tga12.csv");
+        const hinweisRes = await fetch("ndf4.csv");
         const hinweisText = await hinweisRes.text();
         const hinweisLines = hinweisText.split("\n").slice(1);
 
@@ -1403,7 +1406,7 @@ container.innerHTML += `
         hinweiseContainer.innerHTML = html;
 
     } catch (e) {
-        console.error("Fehler beim Laden der Hinweise (tga12.csv):", e);
+        console.error("Fehler beim Laden der Hinweise (ndf4.csv):", e);
     }
 }
 
@@ -1492,17 +1495,17 @@ optimiererVerwendet = false;
         "content-20",
         "content-21",
         "content-22",
-	"content-9",
+        "content-9",
         "content-10",
         "content-23",
-	"content-24",
-       "content-25",
-       "content-27",
-       "content-28",
-       "content-30",
-	"content-31",
-       "content-32",
-       "content-33",
+        "content-24",
+        "content-25",
+        "content-27",
+        "content-28",
+        "content-30",
+        "content-31",
+        "content-32",
+        "content-33",
         "content-13",
         "summary-content",
         "hinweise-content"
