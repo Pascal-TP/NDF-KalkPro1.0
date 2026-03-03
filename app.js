@@ -500,10 +500,10 @@ if (id === "page-14" || id === "page-14-2") {
   if (id === "page-31") loadPage31();
   if (id === "page-32") loadPage32();
   if (id === "page-33") loadPage33();
-  if (id === "page-33") loadPage35();
-  if (id === "page-33") loadPage36();
-  if (id === "page-33") loadPage37();
-  if (id === "page-33") loadPage38();
+  if (id === "page-35") loadPage35();
+  if (id === "page-36") loadPage36();
+  if (id === "page-37") loadPage37();
+  if (id === "page-38") loadPage38();
   if (id === "page-13") loadPage13();
   if (id === "page-admin") loadAdminPage();
 
