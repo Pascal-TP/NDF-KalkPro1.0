@@ -4506,6 +4506,148 @@ function berechneGesamt37() {
 }
 
 		// -----------------------------
+		// SEITE 38 – Parkett schleifen (ndf25.csv)
+		// -----------------------------
+
+function loadPage38() {
+
+    const container = document.getElementById("content-38");
+    if (!container) return;
+
+    if (container.innerHTML.trim() !== "") return;
+
+    fetch("ndf25.csv")
+        .then(response => response.text())
+        .then(data => {
+
+            const lines = data.split("\n").slice(1);
+            let html = "";
+		let headerInserted = false;
+
+            const gespeicherteWerte =
+                JSON.parse(localStorage.getItem("page38Data") || "{}");
+
+            lines.forEach((line, index) => {
+                if (!line.trim()) return;
+
+                const cols = line.split(";");
+                const colA = cols[0]?.trim();
+                const colB = cols[1]?.trim();
+                const colC = cols[2]?.trim();
+                const colD = cols[3]?.trim();
+
+                if (colA === "Titel") {
+                    html += `<div class="title">${colB}</div>`;
+                    return;
+                }
+                if (colA === "Untertitel") {
+                    html += `<div class="subtitle">${colB}</div>`;
+                    return;
+                }
+                if (colA === "Zwischentitel") {
+                    html += `<div class="midtitle">${colB}</div>`;
+                    return;
+                }
+
+                const preis = parseFloat(colD?.replace(",", "."));
+                if (!isNaN(preis)) {
+
+if (!headerInserted) {
+        html += `
+          <div class="row table-header">
+            <div></div>
+            <div>Beschreibung</div>
+            <div>Einheit</div>
+            <div style="text-align:center;">Menge</div>
+            <div style="text-align:right;">Preis / Einheit</div>
+            <div style="text-align:right;">Positionsergebnis</div>
+          </div>
+        `;
+        headerInserted = true;
+}
+
+                    const menge = gespeicherteWerte[index] || 0;
+
+                    html += `
+                        <div class="row">
+                            <div class="col-a">${colA}</div>
+                            <div class="col-b">${colB}</div>
+                            <div class="col-c">${colC}</div>
+
+                            <input class="menge-input"
+                                   type="number" min="0" step="any"
+                                   value="${menge}"
+                                   oninput="calcRow38(this, ${preis}, ${index})">
+
+                            <div class="col-d">
+                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                            </div>
+
+                            <div class="col-e">0,00 €</div>
+                        </div>`;
+                } else {
+                    html += `
+                        <div class="row no-price">
+                            <div class="col-a">${colA}</div>
+                            <div class="col-b" style="grid-column: 2 / 7;">${colB}</div>
+                        </div>`;
+                }
+            });
+
+            html += `<div id="gesamtSumme38" class="gesamt">Gesamtsumme: 0,00 €</div>`;
+ //           html += `<div id="gesamtSumme38Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+ //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+ //        </div>`;
+
+            container.innerHTML = html;
+            berechneGesamt38();
+        });
+}
+
+function calcRow38(input, preis, index) {
+
+    const row = input.parentElement;
+    const ergebnis = row.querySelector(".col-e");
+    const menge = parseFloat(input.value.replace(",", ".")) || 0;
+
+    const sum = menge * preis;
+    ergebnis.innerText =
+        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+
+    let gespeicherteWerte =
+        JSON.parse(localStorage.getItem("page38Data") || "{}");
+
+    gespeicherteWerte[index] = menge;
+    localStorage.setItem("page38Data", JSON.stringify(gespeicherteWerte));
+
+    berechneGesamt38();
+}
+
+function berechneGesamt38() {
+
+    let sum = 0;
+
+    document.querySelectorAll("#page-38 .col-e").forEach(el => {
+        const wert = parseFloat(
+            el.innerText.replace("€","")
+                       .replace(/\./g,"")
+                       .replace(",",".")
+                       .trim()
+        ) || 0;
+        sum += wert;
+    });
+
+    saveSeitenSumme("page-38", sum);
+
+    const gesamtDiv = document.getElementById("gesamtSumme38");
+    if (gesamtDiv) {
+        gesamtDiv.innerText =
+            "Gesamtsumme Angebot: " +
+            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+    }
+}
+
+		// -----------------------------
 		// SEITE 13 – unbeheizte Fläche (ndf21.csv)
 		// -----------------------------
 
