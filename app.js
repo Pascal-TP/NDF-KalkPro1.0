@@ -907,7 +907,9 @@ function submitPage5() {
         {id: "shk-contact", name: "SHK Ansprechpartner"},
         {id: "shk-email", name: "SHK E-Mail"},
         {id: "shk-phone", name: "SHK Telefon-Nr."},
-        {id: "execution-date", name: "Gewünschter Ausführungstermin"}
+        {id: "execution-date", name: "Gewünschter Ausführungstermin"},
+	{id: "vorabplanung", name: "Planung gewünscht?"},
+        {id: "baustellenbesichtigung", name: "Baustellenbesichtigung gewünscht?"}
     ];
 
     let missing = [];
@@ -934,8 +936,7 @@ function submitPage5() {
 function savePage5Data() {
     const ids = [
         "bv-contact", "bv-strasse", "bv-ort", "shk-contact",
-        "shk-email", "shk-phone", "execution-date"
-
+        "shk-email", "shk-phone", "execution-date", "vorabplanung", "baustellenbesichtigung"
     ];
 
     const obj = {};
@@ -1266,7 +1267,9 @@ async function loadPage40() {
         "shk-contact": "SHK Ansprechpartner",
         "shk-email": "SHK E-Mail",
         "shk-phone": "SHK Telefon-Nr.",
-        "execution-date": "Gewünschter Ausführungstermin"
+        "execution-date": "Gewünschter Ausführungstermin",
+        "vorabplanung": "Planung gewünscht?",
+        "baustellenbesichtigung": "Baustellenbesichtigung gewünscht?"
         
     };
 
@@ -1432,7 +1435,7 @@ function direktZumAngebot() {
 
     const fields = [
         "bv-contact", "bv-strasse", "bv-ort", "shk-contact",
-        "shk-email", "shk-phone", "execution-date"
+        "shk-email", "shk-phone", "execution-date", "vorabplanung", "baustellenbesichtigung"
     ];
 
     const alleAusgefüllt = fields.every(id => {
