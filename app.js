@@ -12,118 +12,118 @@ let page40Promise = null;
 const FLOW_KEY = "flowMode";
 
 function isKomplettFlow() {
-  return sessionStorage.getItem(FLOW_KEY) === "komplett";
+    return sessionStorage.getItem(FLOW_KEY) === "komplett";
 }
 function setKomplettFlow() {
-  sessionStorage.setItem(FLOW_KEY, "komplett");
+    sessionStorage.setItem(FLOW_KEY, "komplett");
 }
 function clearKomplettFlow() {
-  sessionStorage.removeItem(FLOW_KEY);
+    sessionStorage.removeItem(FLOW_KEY);
 }
 
 function startKomplettFlow() {
-  setKomplettFlow();
-  showPage("page-15"); // Einstieg Komplett (Versicherung) – wie bisher
+    setKomplettFlow();
+    showPage("page-15"); // Einstieg Komplett (Versicherung) – wie bisher
 }
 
 function applyFlowUI(pageId) {
-  if (pageId === "page-8") {
-    const normalBtn = document.getElementById("btnWeiter8Normal");
-    const komplettBtn = document.getElementById("btnWeiter8Komplett");
+    if (pageId === "page-8") {
+        const normalBtn = document.getElementById("btnWeiter8Normal");
+        const komplettBtn = document.getElementById("btnWeiter8Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
 
-if (pageId === "page-15") {
-    const normalBtn = document.getElementById("btnWeiter15Normal");
-    const komplettBtn = document.getElementById("btnWeiter15Komplett");
+    if (pageId === "page-15") {
+        const normalBtn = document.getElementById("btnWeiter15Normal");
+        const komplettBtn = document.getElementById("btnWeiter15Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-23") {
-    const normalBtn = document.getElementById("btnWeiter23Normal");
-    const komplettBtn = document.getElementById("btnWeiter23Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-23") {
+        const normalBtn = document.getElementById("btnWeiter23Normal");
+        const komplettBtn = document.getElementById("btnWeiter23Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-24") {
-    const normalBtn = document.getElementById("btnWeiter24Normal");
-    const komplettBtn = document.getElementById("btnWeiter24Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-24") {
+        const normalBtn = document.getElementById("btnWeiter24Normal");
+        const komplettBtn = document.getElementById("btnWeiter24Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-9") {
-    const normalBtn = document.getElementById("btnWeiter9Normal");
-    const komplettBtn = document.getElementById("btnWeiter9Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-9") {
+        const normalBtn = document.getElementById("btnWeiter9Normal");
+        const komplettBtn = document.getElementById("btnWeiter9Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-14") {
-    const normalBtn = document.getElementById("btnWeiter14Normal");
-    const komplettBtn = document.getElementById("btnWeiter14Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-14") {
+        const normalBtn = document.getElementById("btnWeiter14Normal");
+        const komplettBtn = document.getElementById("btnWeiter14Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-14-2") {
-    const normalBtn = document.getElementById("btnWeiter142Normal");
-    const komplettBtn = document.getElementById("btnWeiter142Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-14-2") {
+        const normalBtn = document.getElementById("btnWeiter142Normal");
+        const komplettBtn = document.getElementById("btnWeiter142Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-21") {
-    const normalBtn = document.getElementById("btnWeiter21Normal");
-    const komplettBtn = document.getElementById("btnWeiter21Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-21") {
+        const normalBtn = document.getElementById("btnWeiter21Normal");
+        const komplettBtn = document.getElementById("btnWeiter21Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-10") {
-    const normalBtn = document.getElementById("btnWeiter10Normal");
-    const komplettBtn = document.getElementById("btnWeiter10Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-10") {
+        const normalBtn = document.getElementById("btnWeiter10Normal");
+        const komplettBtn = document.getElementById("btnWeiter10Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-18") {
-    const normalBtn = document.getElementById("btnWeiter18Normal");
-    const komplettBtn = document.getElementById("btnWeiter18Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-18") {
+        const normalBtn = document.getElementById("btnWeiter18Normal");
+        const komplettBtn = document.getElementById("btnWeiter18Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-20") {
-    const normalBtn = document.getElementById("btnWeiter20Normal");
-    const komplettBtn = document.getElementById("btnWeiter20Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-20") {
+        const normalBtn = document.getElementById("btnWeiter20Normal");
+        const komplettBtn = document.getElementById("btnWeiter20Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
-if (pageId === "page-22") {
-    const normalBtn = document.getElementById("btnWeiter22Normal");
-    const komplettBtn = document.getElementById("btnWeiter22Komplett");
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
+    if (pageId === "page-22") {
+        const normalBtn = document.getElementById("btnWeiter22Normal");
+        const komplettBtn = document.getElementById("btnWeiter22Komplett");
 
-    const k = isKomplettFlow();
-    if (normalBtn) normalBtn.classList.toggle("hidden", k);
-    if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
-  }
+        const k = isKomplettFlow();
+        if (normalBtn) normalBtn.classList.toggle("hidden", k);
+        if (komplettBtn) komplettBtn.classList.toggle("hidden", !k);
+    }
 
 }
 
@@ -132,9 +132,9 @@ if (pageId === "page-22") {
 // -----------------------------
 
 function startSplashScreen() {
-  setTimeout(() => {
-    showPage("page-login");
-  }, 3000);
+    setTimeout(() => {
+        showPage("page-login");
+    }, 3000);
 }
 
 
@@ -144,48 +144,48 @@ function startSplashScreen() {
 
 
 function resetStoredInputsOnReload() {
-  // Reload erkennen (F5 / Browser-Reload)
-  const nav = performance.getEntriesByType("navigation")[0];
-  const isReload = nav && nav.type === "reload";
+    // Reload erkennen (F5 / Browser-Reload)
+    const nav = performance.getEntriesByType("navigation")[0];
+    const isReload = nav && nav.type === "reload";
 
-  if (!isReload) return;
+    if (!isReload) return;
 
     // Flow-State ebenfalls löschen
-  clearKomplettFlow();
+    clearKomplettFlow();
 
-  // Nur deine Eingabe-/Angebotsdaten löschen (Auth bleibt erhalten!)
-  const keysToRemove = [
-    "page5Data",
-    "angebotTyp",
-    "angebotSummen",
+    // Nur deine Eingabe-/Angebotsdaten löschen (Auth bleibt erhalten!)
+    const keysToRemove = [
+        "page5Data",
+        "angebotTyp",
+        "angebotSummen",
 
-    "page14Data",
-    "page142Data",
-    "page143Data",
-    "page8Data",
-    "page18Data",
-    "page20Data",
-    "page21Data",
-    "page22Data",
-    "page9Data",
-    "page10Data",
-    "page23Data",
-    "page24Data",
-    "page25Data",
-    "page27Data",
-    "page28Data",
-    "page30Data",
-    "page31Data",
-    "page32Data",
-    "page33Data",
-    "page35Data",
-    "page36Data",
-    "page37Data",
-    "page38Data",
-    "page13Data"
-  ];
+        "page14Data",
+        "page142Data",
+        "page143Data",
+        "page8Data",
+        "page18Data",
+        "page20Data",
+        "page21Data",
+        "page22Data",
+        "page9Data",
+        "page10Data",
+        "page23Data",
+        "page24Data",
+        "page25Data",
+        "page27Data",
+        "page28Data",
+        "page30Data",
+        "page31Data",
+        "page32Data",
+        "page33Data",
+        "page35Data",
+        "page36Data",
+        "page37Data",
+        "page38Data",
+        "page13Data"
+    ];
 
-  keysToRemove.forEach(k => localStorage.removeItem(k));
+    keysToRemove.forEach(k => localStorage.removeItem(k));
 }
 
 // SOFORT ausführen (möglichst früh)
@@ -196,25 +196,26 @@ resetStoredInputsOnReload();
 // -----------------------------
 
 function handleUserAction(val) {
-  if (!val) return;
-  
-// ✅ Navigationseinträge
+    if (!val) return;
+
+    // ✅ Navigationseinträge
     if (val.startsWith("nav:")) {
-    const pageId = val.replace("nav:", "");
-    showPage(pageId);
+        const pageId = val.replace("nav:", "");
+        showPage(pageId);
+        const sel = document.getElementById("user-action-select");
+        if (sel) sel.value = "";
+        return;
+    }
+
+    if (val === "clear") {
+        const ok = confirm("Alle Eingaben wirklich löschen?");
+        if (ok) clearInputs();
+    }
+    if (val === "changePw") goToChange();
+    if (val === "logout") logout();
+
     const sel = document.getElementById("user-action-select");
     if (sel) sel.value = "";
-    return;
-  }
-
-  if (val === "clear") {const ok = confirm("Alle Eingaben wirklich löschen?");
-  if (ok) clearInputs();
-  }
-  if (val === "changePw") goToChange();
-  if (val === "logout") logout();
-
-  const sel = document.getElementById("user-action-select");
-  if (sel) sel.value = "";
 }
 window.handleUserAction = handleUserAction;
 
@@ -225,83 +226,83 @@ window.handleUserAction = handleUserAction;
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import {
-  getAuth,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
-  updatePassword,
-  signOut,
-  onAuthStateChanged,
-  setPersistence,
-  browserSessionPersistence,
-  createUserWithEmailAndPassword
+    getAuth,
+    signInWithEmailAndPassword,
+    sendPasswordResetEmail,
+    updatePassword,
+    signOut,
+    onAuthStateChanged,
+    setPersistence,
+    browserSessionPersistence,
+    createUserWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
 import {
-  getFirestore,
-  addDoc,
-  collection,
-  serverTimestamp,
-  doc,
-  setDoc,
-  getDoc,
-  updateDoc,
-  query,
-  where,
-  getDocs
+    getFirestore,
+    addDoc,
+    collection,
+    serverTimestamp,
+    doc,
+    setDoc,
+    getDoc,
+    updateDoc,
+    query,
+    where,
+    getDocs
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCp7Dj7aK1RKIPgd0FOXqjK5SfikgIA_zo",
-  authDomain: "pw-ndf-fbh.firebaseapp.com",
-  projectId: "pw-ndf-fbh",
-  storageBucket: "pw-ndf-fbh.firebasestorage.app",
-  messagingSenderId: "711066316613",
-  appId: "1:711066316613:web:c949f60ecb0b53941c982c",
-  measurementId: "G-RRE926CNCT"
+    apiKey: "AIzaSyCp7Dj7aK1RKIPgd0FOXqjK5SfikgIA_zo",
+    authDomain: "pw-ndf-fbh.firebaseapp.com",
+    projectId: "pw-ndf-fbh",
+    storageBucket: "pw-ndf-fbh.firebasestorage.app",
+    messagingSenderId: "711066316613",
+    appId: "1:711066316613:web:c949f60ecb0b53941c982c",
+    measurementId: "G-RRE926CNCT"
 };
 
 const fbApp = initializeApp(firebaseConfig);
 const auth = getAuth(fbApp);
 (async () => {
-  // 1) Persistenz: nichts im Browser behalten
-  await setPersistence(auth, browserSessionPersistence);
+    // 1) Persistenz: nichts im Browser behalten
+    await setPersistence(auth, browserSessionPersistence);
 
-  // 2) EINMALIGER Cleanup: falls noch eine alte Session (local) rumliegt, abmelden
-  // (nachdem du das einmal deployed hast, ist es danach dauerhaft sauber)
-  // await signOut(auth);
+    // 2) EINMALIGER Cleanup: falls noch eine alte Session (local) rumliegt, abmelden
+    // (nachdem du das einmal deployed hast, ist es danach dauerhaft sauber)
+    // await signOut(auth);
 
-  // 3) Listener erst DANACH
-const app = document.getElementById("app");  
-onAuthStateChanged(auth, user => {
+    // 3) Listener erst DANACH
+    const app = document.getElementById("app");
+    onAuthStateChanged(auth, user => {
 
-  const actions = document.getElementById("user-actions");
-  const info = document.getElementById("login-info");
-  
-  if (user) {
-    // UI
-    actions?.classList.remove("hidden");
-    if (info) info.innerText = "Angemeldet als: " + user.email;
-    updateAdminUI_();
+        const actions = document.getElementById("user-actions");
+        const info = document.getElementById("login-info");
 
-    // direkt ins Tool (ohne Splash)
-    const target = getInitialPage(); // oder dein lastPage-Mechanismus
-    history.replaceState({ page: target }, "", "#" + target);
-    showPage(target, true);
+        if (user) {
+            // UI
+            actions?.classList.remove("hidden");
+            if (info) info.innerText = "Angemeldet als: " + user.email;
+            updateAdminUI_();
 
-  } else {
-    // UI
-    actions?.classList.add("hidden");
-    if (info) info.innerText = "";
-    updateAdminUI_();
+            // direkt ins Tool (ohne Splash)
+            const target = getInitialPage(); // oder dein lastPage-Mechanismus
+            history.replaceState({ page: target }, "", "#" + target);
+            showPage(target, true);
 
-    // Splash zeigen und dann zum Login
-    showPage("page-start", true);
-    startSplashScreen();
-  }
+        } else {
+            // UI
+            actions?.classList.add("hidden");
+            if (info) info.innerText = "";
+            updateAdminUI_();
 
-  // App sichtbar machen
-  app?.classList.remove("hidden");
-});
+            // Splash zeigen und dann zum Login
+            showPage("page-start", true);
+            startSplashScreen();
+        }
+
+        // App sichtbar machen
+        app?.classList.remove("hidden");
+    });
 })();
 
 const db = getFirestore(fbApp);
@@ -312,34 +313,34 @@ const db = getFirestore(fbApp);
 // -----------------------------
 
 function isPrivacyAccepted() {
-  const cb1 = document.getElementById("chkPrivacyAck");
-  const cb2 = document.getElementById("chkPrivacyAck2");
-  return !!(cb1?.checked || cb2?.checked);
+    const cb1 = document.getElementById("chkPrivacyAck");
+    const cb2 = document.getElementById("chkPrivacyAck2");
+    return !!(cb1?.checked || cb2?.checked);
 }
 
 function updateAuthButtons() {
-  const ok = isPrivacyAccepted();
+    const ok = isPrivacyAccepted();
 
-  const btnLogin = document.getElementById("btnLogin");
-  const btnRegisterSend = document.getElementById("btnRegisterSend");
+    const btnLogin = document.getElementById("btnLogin");
+    const btnRegisterSend = document.getElementById("btnRegisterSend");
 
-  // NICHT disabled setzen -> sonst kein Klick -> keine Fehlermeldung
-  btnLogin?.classList.toggle("btn-disabled", !ok);
-  btnRegisterSend?.classList.toggle("btn-disabled", !ok);
+    // NICHT disabled setzen -> sonst kein Klick -> keine Fehlermeldung
+    btnLogin?.classList.toggle("btn-disabled", !ok);
+    btnRegisterSend?.classList.toggle("btn-disabled", !ok);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const cb1 = document.getElementById("chkPrivacyAck");
-  const cb2 = document.getElementById("chkPrivacyAck2");
+    const cb1 = document.getElementById("chkPrivacyAck");
+    const cb2 = document.getElementById("chkPrivacyAck2");
 
-  cb1?.addEventListener("change", updateAuthButtons);
-  cb2?.addEventListener("change", updateAuthButtons);
+    cb1?.addEventListener("change", updateAuthButtons);
+    cb2?.addEventListener("change", updateAuthButtons);
 
-  // Startzustand: ohne Haken
-  if (cb1) cb1.checked = false;
-  if (cb2) cb2.checked = false;
+    // Startzustand: ohne Haken
+    if (cb1) cb1.checked = false;
+    if (cb2) cb2.checked = false;
 
-  updateAuthButtons();
+    updateAuthButtons();
 });
 
 // -----------------------------
@@ -347,87 +348,87 @@ document.addEventListener("DOMContentLoaded", () => {
 // -----------------------------
 
 function makeTempPassword(len = 18) {
-  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@$%*-_";
-  let out = "";
-  for (let i = 0; i < len; i++) out += chars[Math.floor(Math.random() * chars.length)];
-  return out;
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@$%*-_";
+    let out = "";
+    for (let i = 0; i < len; i++) out += chars[Math.floor(Math.random() * chars.length)];
+    return out;
 }
 
 async function registerRequest() {
-  const err = document.getElementById("reg-error");
-  const info = document.getElementById("reg-info");
-  if (err) err.innerText = "";
-  if (info) info.innerText = "";
+    const err = document.getElementById("reg-error");
+    const info = document.getElementById("reg-info");
+    if (err) err.innerText = "";
+    if (info) info.innerText = "";
 
-  const firma   = (document.getElementById("reg-firma")?.value || "").trim();
-  const name    = (document.getElementById("reg-name")?.value || "").trim();
-  const strasse = (document.getElementById("reg-strasse")?.value || "").trim();
-  const hausnr  = (document.getElementById("reg-hausnr")?.value || "").trim();
-  const plz     = (document.getElementById("reg-plz")?.value || "").trim();
-  const ort     = (document.getElementById("reg-ort")?.value || "").trim();
-  const email   = (document.getElementById("reg-email")?.value || "").trim().toLowerCase();
-  const tel     = (document.getElementById("reg-tel")?.value || "").trim();
+    const firma = (document.getElementById("reg-firma")?.value || "").trim();
+    const name = (document.getElementById("reg-name")?.value || "").trim();
+    const strasse = (document.getElementById("reg-strasse")?.value || "").trim();
+    const hausnr = (document.getElementById("reg-hausnr")?.value || "").trim();
+    const plz = (document.getElementById("reg-plz")?.value || "").trim();
+    const ort = (document.getElementById("reg-ort")?.value || "").trim();
+    const email = (document.getElementById("reg-email")?.value || "").trim().toLowerCase();
+    const tel = (document.getElementById("reg-tel")?.value || "").trim();
 
-  // 1) Erst Pflichtfelder prüfen
-  const missing = [];
-  if (!firma) missing.push("Firmenname");
-  if (!name) missing.push("Name Ansprechpartner");
-  if (!strasse) missing.push("Straße");
-  if (!hausnr) missing.push("Hausnummer");
-  if (!plz) missing.push("PLZ");
-  if (!ort) missing.push("Ort");
-  if (!email) missing.push("E-Mail-Adresse");
-  if (!tel) missing.push("Telefonnummer");
+    // 1) Erst Pflichtfelder prüfen
+    const missing = [];
+    if (!firma) missing.push("Firmenname");
+    if (!name) missing.push("Name Ansprechpartner");
+    if (!strasse) missing.push("Straße");
+    if (!hausnr) missing.push("Hausnummer");
+    if (!plz) missing.push("PLZ");
+    if (!ort) missing.push("Ort");
+    if (!email) missing.push("E-Mail-Adresse");
+    if (!tel) missing.push("Telefonnummer");
 
-  if (missing.length) {
-    if (err) err.innerText = "Bitte ausfüllen: " + missing.join(", ");
-    return;
-  }
-
-  // 2) Dann Checkbox prüfen
-  if (!isPrivacyAccepted()) {
-    if (err) err.innerText =
-      "Bitte bestätigen Sie die Datenschutzerklärung (Haken setzen), um die Registrierung abzusenden.";
-    return;
-  }
-
- try {
-    const cred = await createUserWithEmailAndPassword(auth, email, makeTempPassword());
-
-    await setDoc(doc(db, "users", cred.user.uid), {
-      firma, name, strasse, hausnr, plz, ort, email, tel,
-      approved: false,
-      createdAt: serverTimestamp()
-    });
-
-    await addDoc(collection(db, "registrationRequests"), {
-      uid: cred.user.uid,
-      email,
-      firma,
-      name,
-      createdAt: serverTimestamp(),
-      status: "pending"
-    });
-
-    await signOut(auth);
-
-    if (info) info.innerText = "Registrierung eingegangen. Du erhältst Zugang nach Freigabe.";
-
-    // zurück zum Login
-    showPage("page-login");
-    const loginError = document.getElementById("loginError");
-    if (loginError) loginError.innerText = "Registrierung eingegangen. Bitte auf Freigabe warten.";
-
-  } catch (e) {
-    console.error(e);
-    if (err) {
-      if (String(e?.code || "").includes("auth/email-already-in-use")) {
-        err.innerText = "Diese E-Mail ist bereits registriert. Nutze 'Passwort vergessen' oder kontaktiere den Admin.";
-      } else {
-        err.innerText = "Registrierung fehlgeschlagen. Bitte prüfen und erneut versuchen.";
-      }
+    if (missing.length) {
+        if (err) err.innerText = "Bitte ausfüllen: " + missing.join(", ");
+        return;
     }
-  }
+
+    // 2) Dann Checkbox prüfen
+    if (!isPrivacyAccepted()) {
+        if (err) err.innerText =
+            "Bitte bestätigen Sie die Datenschutzerklärung (Haken setzen), um die Registrierung abzusenden.";
+        return;
+    }
+
+    try {
+        const cred = await createUserWithEmailAndPassword(auth, email, makeTempPassword());
+
+        await setDoc(doc(db, "users", cred.user.uid), {
+            firma, name, strasse, hausnr, plz, ort, email, tel,
+            approved: false,
+            createdAt: serverTimestamp()
+        });
+
+        await addDoc(collection(db, "registrationRequests"), {
+            uid: cred.user.uid,
+            email,
+            firma,
+            name,
+            createdAt: serverTimestamp(),
+            status: "pending"
+        });
+
+        await signOut(auth);
+
+        if (info) info.innerText = "Registrierung eingegangen. Du erhältst Zugang nach Freigabe.";
+
+        // zurück zum Login
+        showPage("page-login");
+        const loginError = document.getElementById("loginError");
+        if (loginError) loginError.innerText = "Registrierung eingegangen. Bitte auf Freigabe warten.";
+
+    } catch (e) {
+        console.error(e);
+        if (err) {
+            if (String(e?.code || "").includes("auth/email-already-in-use")) {
+                err.innerText = "Diese E-Mail ist bereits registriert. Nutze 'Passwort vergessen' oder kontaktiere den Admin.";
+            } else {
+                err.innerText = "Registrierung fehlgeschlagen. Bitte prüfen und erneut versuchen.";
+            }
+        }
+    }
 }
 
 
@@ -435,9 +436,9 @@ window.registerRequest = registerRequest;
 
 
 
-			// -----------------------------
-			// TableHeaderWithImage - Bild neben Spaltenüberschriften einfügen
-			// -----------------------------
+// -----------------------------
+// TableHeaderWithImage - Bild neben Spaltenüberschriften einfügen
+// -----------------------------
 //
 //function renderTableHeaderWithImage(imgSrc = "bild3.jpg") {
 //  return `
@@ -460,72 +461,72 @@ window.registerRequest = registerRequest;
 // -----------------------------
 
 async function showPage(id, fromHistory = false) {
-  
-// letzte Seite merken (nur für dieses Tab/Fenster)
-  sessionStorage.setItem("lastPage", id);
 
-// Browser-History nur setzen, wenn NICHT durch Zurück/Vor ausgelöst
-  if (!fromHistory) {
-    history.pushState({ page: id }, "", "#" + id);
-  }
+    // letzte Seite merken (nur für dieses Tab/Fenster)
+    sessionStorage.setItem("lastPage", id);
 
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-  const el = document.getElementById(id);
-  if (!el) return;           // Sicherheitsnetz
-  el.classList.add("active");  
-  
-if (id === "page-14" || id === "page-14-2") {
-  // wichtig: erst laden, dann anwenden
-  // (falls loadPage14/page142 den Content erst füllt)
-  setTimeout(() => applyWrRecommendation(id), 0);
-}
+    // Browser-History nur setzen, wenn NICHT durch Zurück/Vor ausgelöst
+    if (!fromHistory) {
+        history.pushState({ page: id }, "", "#" + id);
+    }
+
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    const el = document.getElementById(id);
+    if (!el) return;           // Sicherheitsnetz
+    el.classList.add("active");
+
+    if (id === "page-14" || id === "page-14-2") {
+        // wichtig: erst laden, dann anwenden
+        // (falls loadPage14/page142 den Content erst füllt)
+        setTimeout(() => applyWrRecommendation(id), 0);
+    }
 
     if (id === "page-14") loadPage14();
-  if (id === "page-14-3") loadPage143();
-  if (id === "page-14-2") loadPage142();
-  if (id === "page-8") loadPage8();
-  if (id === "page-18") loadPage18();
-  if (id === "page-20") loadPage20();
-  if (id === "page-21") loadPage21();
-  if (id === "page-22") loadPage22();
-  if (id === "page-9") loadPage9();
-  if (id === "page-10") loadPage10();
-  if (id === "page-23") loadPage23();
-  if (id === "page-24") loadPage24();
-  if (id === "page-25") loadPage25();
-  if (id === "page-25") loadPage25();
-  if (id === "page-27") loadPage27();
-  if (id === "page-28") loadPage28();
-  if (id === "page-30") loadPage30();
-  if (id === "page-31") loadPage31();
-  if (id === "page-32") loadPage32();
-  if (id === "page-33") loadPage33();
-  if (id === "page-35") loadPage35();
-  if (id === "page-36") loadPage36();
-  if (id === "page-37") loadPage37();
-  if (id === "page-38") loadPage38();
-  if (id === "page-13") loadPage13();
-  if (id === "page-admin") loadAdminPage();
+    if (id === "page-14-3") loadPage143();
+    if (id === "page-14-2") loadPage142();
+    if (id === "page-8") loadPage8();
+    if (id === "page-18") loadPage18();
+    if (id === "page-20") loadPage20();
+    if (id === "page-21") loadPage21();
+    if (id === "page-22") loadPage22();
+    if (id === "page-9") loadPage9();
+    if (id === "page-10") loadPage10();
+    if (id === "page-23") loadPage23();
+    if (id === "page-24") loadPage24();
+    if (id === "page-25") loadPage25();
+    if (id === "page-25") loadPage25();
+    if (id === "page-27") loadPage27();
+    if (id === "page-28") loadPage28();
+    if (id === "page-30") loadPage30();
+    if (id === "page-31") loadPage31();
+    if (id === "page-32") loadPage32();
+    if (id === "page-33") loadPage33();
+    if (id === "page-35") loadPage35();
+    if (id === "page-36") loadPage36();
+    if (id === "page-37") loadPage37();
+    if (id === "page-38") loadPage38();
+    if (id === "page-13") loadPage13();
+    if (id === "page-admin") loadAdminPage();
 
-  applyFlowUI(id);
-  
-  if (id === "page-40") {
-    showLoader40(true);
-    try {
-      page40Promise = loadPage40();
-      await page40Promise;
-    } finally {
-      showLoader40(false);
+    applyFlowUI(id);
+
+    if (id === "page-40") {
+        showLoader40(true);
+        try {
+            page40Promise = loadPage40();
+            await page40Promise;
+        } finally {
+            showLoader40(false);
+        }
     }
-  }
-// Checkboxen beim Seitenwechsel zurücksetzen
-  const cb1 = document.getElementById("chkPrivacyAck");
-  const cb2 = document.getElementById("chkPrivacyAck2");
+    // Checkboxen beim Seitenwechsel zurücksetzen
+    const cb1 = document.getElementById("chkPrivacyAck");
+    const cb2 = document.getElementById("chkPrivacyAck2");
 
-  if (cb1) cb1.checked = false;
-  if (cb2) cb2.checked = false;
+    if (cb1) cb1.checked = false;
+    if (cb2) cb2.checked = false;
 
-  updateAuthButtons();
+    updateAuthButtons();
 }
 
 // -----------------------------
@@ -533,217 +534,217 @@ if (id === "page-14" || id === "page-14-2") {
 // -----------------------------
 
 async function login() {
-  const loginError = document.getElementById("loginError");
+    const loginError = document.getElementById("loginError");
 
-  const email = (document.getElementById("loginUser")?.value || "").trim();
-  const pw = (document.getElementById("loginPass")?.value || "");
+    const email = (document.getElementById("loginUser")?.value || "").trim();
+    const pw = (document.getElementById("loginPass")?.value || "");
 
-  // 1) Erst Eingaben prüfen
-  if (!email || !pw) {
-    if (loginError) loginError.innerText = "Bitte E-Mail und Passwort eingeben.";
-    return;
-  }
+    // 1) Erst Eingaben prüfen
+    if (!email || !pw) {
+        if (loginError) loginError.innerText = "Bitte E-Mail und Passwort eingeben.";
+        return;
+    }
 
-  // 2) Dann Datenschutz-Haken prüfen
-  if (!isPrivacyAccepted()) {
-    if (loginError) loginError.innerText =
-      "Bitte bestätigen Sie die Datenschutzerklärung (Haken setzen), um sich anzumelden.";
-    return;
-  }
+    // 2) Dann Datenschutz-Haken prüfen
+    if (!isPrivacyAccepted()) {
+        if (loginError) loginError.innerText =
+            "Bitte bestätigen Sie die Datenschutzerklärung (Haken setzen), um sich anzumelden.";
+        return;
+    }
 
-  try {
-    const cred = await signInWithEmailAndPassword(auth, email, pw);
-    currentUser = cred.user;
+    try {
+        const cred = await signInWithEmailAndPassword(auth, email, pw);
+        currentUser = cred.user;
 
-    // zentral loggen
-    await addDoc(collection(db, "loginLogs"), {
-      uid: currentUser.uid,
-      email: currentUser.email,
-      event: "LOGIN_SUCCESS",
-      time: serverTimestamp()
-    });
+        // zentral loggen
+        await addDoc(collection(db, "loginLogs"), {
+            uid: currentUser.uid,
+            email: currentUser.email,
+            event: "LOGIN_SUCCESS",
+            time: serverTimestamp()
+        });
 
-const udoc = await getDoc(doc(db, "users", currentUser.uid));
-const approved = udoc.exists() && udoc.data().approved === true;
+        const udoc = await getDoc(doc(db, "users", currentUser.uid));
+        const approved = udoc.exists() && udoc.data().approved === true;
 
-if (!approved) {
-  await signOut(auth);
-  currentUser = null;
-  showPage("page-login");
-  loginError.innerText = "Account ist noch nicht freigeschaltet. Bitte auf Freigabe warten.";
-  return;
-}
+        if (!approved) {
+            await signOut(auth);
+            currentUser = null;
+            showPage("page-login");
+            loginError.innerText = "Account ist noch nicht freigeschaltet. Bitte auf Freigabe warten.";
+            return;
+        }
 
-    updateAdminUI_();
-    startTimer();
-    showPage("page-3");
-  } catch (e) {
-  console.error("LOGIN ERROR:", e?.code, e?.message, e);
-  loginError.innerText = `Login fehlgeschlagen: ${e?.code || "unknown"}\n${e?.message || ""}`;
-}
+        updateAdminUI_();
+        startTimer();
+        showPage("page-3");
+    } catch (e) {
+        console.error("LOGIN ERROR:", e?.code, e?.message, e);
+        loginError.innerText = `Login fehlgeschlagen: ${e?.code || "unknown"}\n${e?.message || ""}`;
+    }
 }
 
 async function logout() {
-  try {
-    await signOut(auth);
+    try {
+        await signOut(auth);
 
-    currentUser = null;
+        currentUser = null;
 
-    // Timer stoppen + Anzeige zurücksetzen
-    clearInterval(logoutTimer);
-    remaining = 600;
-    const t = document.getElementById("timer");
-    if (t) t.innerText = "Logout in: 10:00";
+        // Timer stoppen + Anzeige zurücksetzen
+        clearInterval(logoutTimer);
+        remaining = 600;
+        const t = document.getElementById("timer");
+        if (t) t.innerText = "Logout in: 10:00";
 
-    // Admin-Button ausblenden
-    updateAdminUI_();
+        // Admin-Button ausblenden
+        updateAdminUI_();
 
-    // optional: Login-Felder leeren
-    loginPass.value = "";
-    // loginUser.value = ""; // nur wenn du auch die Mail leeren willst
+        // optional: Login-Felder leeren
+        loginPass.value = "";
+        // loginUser.value = ""; // nur wenn du auch die Mail leeren willst
 
-    const info = document.getElementById("login-info");
-    if (info) info.innerText = "";
+        const info = document.getElementById("login-info");
+        if (info) info.innerText = "";
 
-    showPage("page-login");
-    loginError.innerText = "Erfolgreich abgemeldet.";
-  } catch (e) {
-    console.error(e);
-    alert("Abmelden fehlgeschlagen");
-  }
+        showPage("page-login");
+        loginError.innerText = "Erfolgreich abgemeldet.";
+    } catch (e) {
+        console.error(e);
+        alert("Abmelden fehlgeschlagen");
+    }
 }
 
 async function forgotPassword() {
-  const email = loginUser.value.trim();
-  if (!email) {
-    loginError.innerText = "Bitte E-Mail eingeben.";
-    return;
-  }
-  try {
-    await sendPasswordResetEmail(auth, email);
-    loginError.innerText = "Reset-Link wurde per E-Mail gesendet. Schauen Sie auch in Ihrem Spam-Ordner nach.";
-  } catch (e) {
-    loginError.innerText = "Reset-Mail konnte nicht gesendet werden.";
-  }
+    const email = loginUser.value.trim();
+    if (!email) {
+        loginError.innerText = "Bitte E-Mail eingeben.";
+        return;
+    }
+    try {
+        await sendPasswordResetEmail(auth, email);
+        loginError.innerText = "Reset-Link wurde per E-Mail gesendet. Schauen Sie auch in Ihrem Spam-Ordner nach.";
+    } catch (e) {
+        loginError.innerText = "Reset-Mail konnte nicht gesendet werden.";
+    }
 }
 
 function goToChange() {
-  if (!auth.currentUser) {
-    loginError.innerText = "Bitte erst anmelden.";
-    return;
-  }
-  showPage("page-change");
+    if (!auth.currentUser) {
+        loginError.innerText = "Bitte erst anmelden.";
+        return;
+    }
+    showPage("page-change");
 }
 
 
 
 async function savePassword() {
-  const n1 = newPass1.value;
-  const n2 = newPass2.value;
+    const n1 = newPass1.value;
+    const n2 = newPass2.value;
 
-  if (!n1 || !n2) {
-    changeError.innerText = "Bitte alle Felder ausfüllen.";
-    return;
-  }
-  if (n1 !== n2) {
-    changeError.innerText = "Neue Passwörter stimmen nicht überein.";
-    return;
-  }
-  if (!auth.currentUser) {
-    changeError.innerText = "Nicht eingeloggt.";
-    return;
-  }
+    if (!n1 || !n2) {
+        changeError.innerText = "Bitte alle Felder ausfüllen.";
+        return;
+    }
+    if (n1 !== n2) {
+        changeError.innerText = "Neue Passwörter stimmen nicht überein.";
+        return;
+    }
+    if (!auth.currentUser) {
+        changeError.innerText = "Nicht eingeloggt.";
+        return;
+    }
 
-  try {
-    await updatePassword(auth.currentUser, n1);
-    changeError.innerText = "";
-    alert("Passwort geändert.");
-    showPage("page-3");
-  } catch (e) {
-    changeError.innerText = "Passwort konnte nicht geändert werden (ggf. neu einloggen).";
-  }
+    try {
+        await updatePassword(auth.currentUser, n1);
+        changeError.innerText = "";
+        alert("Passwort geändert.");
+        showPage("page-3");
+    } catch (e) {
+        changeError.innerText = "Passwort konnte nicht geändert werden (ggf. neu einloggen).";
+    }
 }
 
 async function exportLoginLog() {
-  const adminEmail = "pascal.gasch@tpholding.de";
-  const userEmail = auth.currentUser?.email || "";
-  if (userEmail.toLowerCase() !== adminEmail.toLowerCase()) {
-    alert("Keine Berechtigung.");
-    return;
-  }
+    const adminEmail = "pascal.gasch@tpholding.de";
+    const userEmail = auth.currentUser?.email || "";
+    if (userEmail.toLowerCase() !== adminEmail.toLowerCase()) {
+        alert("Keine Berechtigung.");
+        return;
+    }
 
-  const { getDocs, query, orderBy } = await import(
-    "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"
-  );
+    const { getDocs, query, orderBy } = await import(
+        "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"
+    );
 
-  const q = query(collection(db, "loginLogs"), orderBy("time", "desc"));
-  const snap = await getDocs(q);
+    const q = query(collection(db, "loginLogs"), orderBy("time", "desc"));
+    const snap = await getDocs(q);
 
-  let csv = "time;email;event\n";
-  snap.forEach(d => {
-    const x = d.data();
-    const time = x.time?.toDate ? x.time.toDate().toISOString() : "";
-    csv += `${time};${x.email || ""};${x.event || ""}\n`;
-  });
+    let csv = "time;email;event\n";
+    snap.forEach(d => {
+        const x = d.data();
+        const time = x.time?.toDate ? x.time.toDate().toISOString() : "";
+        csv += `${time};${x.email || ""};${x.event || ""}\n`;
+    });
 
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
 
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "login-log.csv";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "login-log.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
 }
 
 window.exportLoginLog = exportLoginLog;
 
-  
+
 // -----------------------------
 // Admin-Freigabe + Mail auslösen (ohne Backend)
 // -----------------------------
 
 async function loadPendingUsers() {
-  const adminEmail = "pascal.gasch@tpholding.de";
-  if ((auth.currentUser?.email || "").toLowerCase() !== adminEmail.toLowerCase()) return [];
+    const adminEmail = "pascal.gasch@tpholding.de";
+    if ((auth.currentUser?.email || "").toLowerCase() !== adminEmail.toLowerCase()) return [];
 
-  const q = query(collection(db, "users"), where("approved", "==", false));
-  const snap = await getDocs(q);
+    const q = query(collection(db, "users"), where("approved", "==", false));
+    const snap = await getDocs(q);
 
-  const list = [];
-  snap.forEach(d => list.push({ uid: d.id, ...d.data() }));
-  return list;
+    const list = [];
+    snap.forEach(d => list.push({ uid: d.id, ...d.data() }));
+    return list;
 }
 
 async function approveUser(uid, email) {
-  const adminEmail = "pascal.gasch@tpholding.de";
-  if ((auth.currentUser?.email || "").toLowerCase() !== adminEmail.toLowerCase()) {
-    alert("Keine Berechtigung.");
-    return;
-  }
+    const adminEmail = "pascal.gasch@tpholding.de";
+    if ((auth.currentUser?.email || "").toLowerCase() !== adminEmail.toLowerCase()) {
+        alert("Keine Berechtigung.");
+        return;
+    }
 
-  // ✅ udoc holen
-  const uref = doc(db, "users", uid);
-  const udoc = await getDoc(uref);
+    // ✅ udoc holen
+    const uref = doc(db, "users", uid);
+    const udoc = await getDoc(uref);
 
-  // ✅ schon freigegeben?
-  if (udoc.exists() && udoc.data().approved === true) {
-    alert("User ist bereits freigegeben.");
-    return;
-  }
+    // ✅ schon freigegeben?
+    if (udoc.exists() && udoc.data().approved === true) {
+        alert("User ist bereits freigegeben.");
+        return;
+    }
 
-  await updateDoc(uref, {
-    approved: true,
-    approvedAt: serverTimestamp(),
-    approvedBy: auth.currentUser.email
-  });
+    await updateDoc(uref, {
+        approved: true,
+        approvedAt: serverTimestamp(),
+        approvedBy: auth.currentUser.email
+    });
 
-  await sendPasswordResetEmail(auth, email);
+    await sendPasswordResetEmail(auth, email);
 
-  alert("Freigegeben. Passwort-Reset-Mail wurde gesendet.");
-  if (typeof loadAdminPage === "function") loadAdminPage();
+    alert("Freigegeben. Passwort-Reset-Mail wurde gesendet.");
+    if (typeof loadAdminPage === "function") loadAdminPage();
 }
 
 window.loadPendingUsers = loadPendingUsers;
@@ -755,14 +756,14 @@ window.approveUser = approveUser;
 // -----------------------------
 
 function updateAdminUI_() {
-  const adminEmail = "pascal.gasch@tpholding.de";
-  const isAdmin = (auth.currentUser?.email || "").toLowerCase() === adminEmail.toLowerCase();
+    const adminEmail = "pascal.gasch@tpholding.de";
+    const isAdmin = (auth.currentUser?.email || "").toLowerCase() === adminEmail.toLowerCase();
 
-  const btn = document.getElementById("btnExportLog");
-  if (btn) btn.classList.toggle("hidden", !isAdmin);
+    const btn = document.getElementById("btnExportLog");
+    if (btn) btn.classList.toggle("hidden", !isAdmin);
 
-  const btnAdmin = document.getElementById("btnAdmin");
-  if (btnAdmin) btnAdmin.classList.toggle("hidden", !isAdmin);
+    const btnAdmin = document.getElementById("btnAdmin");
+    if (btnAdmin) btnAdmin.classList.toggle("hidden", !isAdmin);
 }
 
 // -----------------------------
@@ -770,33 +771,33 @@ function updateAdminUI_() {
 // -----------------------------
 
 async function loadAdminPage() {
-  const box = document.getElementById("admin-registrations");
-  if (!box) return;
+    const box = document.getElementById("admin-registrations");
+    if (!box) return;
 
-  // nur Admin
-  const adminEmail = "pascal.gasch@tpholding.de";
-  const isAdmin = (auth.currentUser?.email || "").toLowerCase() === adminEmail.toLowerCase();
+    // nur Admin
+    const adminEmail = "pascal.gasch@tpholding.de";
+    const isAdmin = (auth.currentUser?.email || "").toLowerCase() === adminEmail.toLowerCase();
 
-  if (!isAdmin) {
-    box.innerHTML = "<div>Keine Berechtigung.</div>";
-    return;
-  }
-
-  box.innerHTML = "<div>Lade…</div>";
-
-  try {
-    const q = query(collection(db, "users"), where("approved", "==", false));
-    const snap = await getDocs(q);
-
-    if (snap.empty) {
-      box.innerHTML = "<div>Keine offenen Registrierungen 🎉</div>";
-      return;
+    if (!isAdmin) {
+        box.innerHTML = "<div>Keine Berechtigung.</div>";
+        return;
     }
 
-    let html = "";
-    snap.forEach(d => {
-      const u = d.data();
-      html += `
+    box.innerHTML = "<div>Lade…</div>";
+
+    try {
+        const q = query(collection(db, "users"), where("approved", "==", false));
+        const snap = await getDocs(q);
+
+        if (snap.empty) {
+            box.innerHTML = "<div>Keine offenen Registrierungen 🎉</div>";
+            return;
+        }
+
+        let html = "";
+        snap.forEach(d => {
+            const u = d.data();
+            html += `
         <div style="border:1px solid #ddd; padding:10px; margin:10px 0; border-radius:8px;">
           <div><strong>Firma:</strong> ${u.firma || ""}</div>
           <div><strong>Ansprechpartner:</strong> ${u.name || u.ansprechpartner || ""}</div>
@@ -811,14 +812,14 @@ async function loadAdminPage() {
           </div>
         </div>
       `;
-    });
+        });
 
-    box.innerHTML = html;
+        box.innerHTML = html;
 
-  } catch (e) {
-    console.error("loadAdminPage Fehler:", e);
-    box.innerHTML = "<div>Fehler beim Laden der Registrierungen.</div>";
-  }
+    } catch (e) {
+        console.error("loadAdminPage Fehler:", e);
+        box.innerHTML = "<div>Fehler beim Laden der Registrierungen.</div>";
+    }
 }
 
 window.loadAdminPage = loadAdminPage;
@@ -834,7 +835,7 @@ function startTimer() {
         remaining--;
         let m = Math.floor(remaining / 60);
         let s = remaining % 60;
-        timer.innerText = `Logout in: ${m}:${s.toString().padStart(2,"0")}`;
+        timer.innerText = `Logout in: ${m}:${s.toString().padStart(2, "0")}`;
         if (remaining <= 0) {
             alert("Automatisch ausgeloggt.");
             location.reload();
@@ -849,11 +850,11 @@ function startTimer() {
 let angebotSummen = JSON.parse(localStorage.getItem("angebotSummen") || "{}");
 
 function saveSeitenSumme(seitenId, summe) {
-  angebotSummen[seitenId] = summe;
-  localStorage.setItem("angebotSummen", JSON.stringify(angebotSummen));
+    angebotSummen[seitenId] = summe;
+    localStorage.setItem("angebotSummen", JSON.stringify(angebotSummen));
 
-//// NEU: Rabatt-Anzeigen automatisch nachziehen
-//  refreshRabattDisplays();
+    //// NEU: Rabatt-Anzeigen automatisch nachziehen
+    //  refreshRabattDisplays();
 }
 
 function getGesamtAngebotssumme() {
@@ -901,15 +902,15 @@ function getGesamtAngebotssumme() {
 
 function submitPage5() {
     const fields = [
-        {id: "bv-contact", name: "Kontakt / Ansprechpartner"},
-        {id: "bv-strasse", name: "Straße, Hausnummer"},
-        {id: "bv-ort", name: "PLZ, Ort"},
-        {id: "shk-contact", name: "SHK Ansprechpartner"},
-        {id: "shk-email", name: "SHK E-Mail"},
-        {id: "shk-phone", name: "SHK Telefon-Nr."},
-        {id: "execution-date", name: "Gewünschter Ausführungstermin"},
-	{id: "vorabplanung", name: "Planung gewünscht?"},
-        {id: "baustellenbesichtigung", name: "Baustellenbesichtigung gewünscht?"}
+        { id: "bv-contact", name: "Kontakt / Ansprechpartner" },
+        { id: "bv-strasse", name: "Straße, Hausnummer" },
+        { id: "bv-ort", name: "PLZ, Ort" },
+        { id: "shk-contact", name: "SHK Ansprechpartner" },
+        { id: "shk-email", name: "SHK E-Mail" },
+        { id: "shk-phone", name: "SHK Telefon-Nr." },
+        { id: "execution-date", name: "Gewünschter Ausführungstermin" },
+        { id: "vorabplanung", name: "Planung gewünscht?" },
+        { id: "baustellenbesichtigung", name: "Baustellenbesichtigung gewünscht?" }
     ];
 
     let missing = [];
@@ -929,7 +930,7 @@ function submitPage5() {
     errorDiv.innerText = "";
 
     savePage5Data();
-    
+
     showPage("page-4");
 }
 
@@ -945,9 +946,9 @@ function savePage5Data() {
     localStorage.setItem("page5Data", JSON.stringify(obj));
 }
 
-      		// -----------------------------
-		// SEITE 14 – Tackersystem Hausmarke (ndf1.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 14 – Tackersystem Hausmarke (ndf1.csv)
+// -----------------------------
 
 let page14Loaded = false;
 
@@ -964,8 +965,8 @@ function loadPage14() {
             const container = document.getElementById("page14-content");
 
             let html = "";
-let headerInserted = false;            
-let gespeicherteWerte = JSON.parse(localStorage.getItem("page14Data") || "{}");
+            let headerInserted = false;
+            let gespeicherteWerte = JSON.parse(localStorage.getItem("page14Data") || "{}");
 
             lines.forEach((line, index) => {
 
@@ -994,8 +995,8 @@ let gespeicherteWerte = JSON.parse(localStorage.getItem("page14Data") || "{}");
 
                 if (preisVorhanden) {
 
-if (!headerInserted) {
-    html += `
+                    if (!headerInserted) {
+                        html += `
       <div class="row table-header">
         <div></div>
         <div>Beschreibung</div>
@@ -1005,8 +1006,8 @@ if (!headerInserted) {
         <div style="text-align:right;">Positionsergebnis</div>
       </div>
     `;
-    headerInserted = true;
-  } 
+                        headerInserted = true;
+                    }
 
                     const preis = parseFloat(colD.replace(",", "."));
                     const gespeicherteMenge = gespeicherteWerte[index] || 0;
@@ -1020,7 +1021,7 @@ if (!headerInserted) {
                                type="number" min="0" step="any"
                                value="${gespeicherteMenge}"
                                oninput="calcRowPage14(this,${preis},${index})">
-                        <div class="col-d">${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €</div>
+                        <div class="col-d">${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €</div>
                         <div class="col-e">0,00 €</div>
                     </div>`;
                 } else {
@@ -1034,9 +1035,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme14" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme14Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme14Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
 
@@ -1053,7 +1054,7 @@ function calcRowPage14(input, preisWert, index) {
     const wert = menge * preisWert;
 
     ergebnis.innerText =
-        wert.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        wert.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page14Data") || "{}");
@@ -1071,10 +1072,10 @@ function berechneGesamt14() {
 
     document.querySelectorAll("#page-14 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -1086,59 +1087,59 @@ function berechneGesamt14() {
     const gesamtDiv = document.getElementById("gesamtSumme14");
     if (gesamtDiv) {
         gesamtDiv.innerText =
-            "Gesamtsumme Angebot: " + getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            "Gesamtsumme Angebot: " + getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-	        // -----------------------------
-		// SEITE 14.3 – Tackersystem ROTH (ndf3.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 14.3 – Tackersystem ROTH (ndf3.csv)
+// -----------------------------
 
 function loadPage143() {
 
-  const container = document.getElementById("content-14-3");
-  if (!container) return;
+    const container = document.getElementById("content-14-3");
+    if (!container) return;
 
-  // Falls schon geladen → nicht nochmal laden
-  if (container.innerHTML.trim() !== "") return;
+    // Falls schon geladen → nicht nochmal laden
+    if (container.innerHTML.trim() !== "") return;
 
-  fetch("ndf3.csv")
-    .then(response => response.text())
-    .then(data => {
+    fetch("ndf3.csv")
+        .then(response => response.text())
+        .then(data => {
 
-      const lines = data.split("\n").slice(1);
-      let html = "";
-let headerInserted = false;
+            const lines = data.split("\n").slice(1);
+            let html = "";
+            let headerInserted = false;
 
-      lines.forEach((line, index) => {
-        if (!line.trim()) return;
+            lines.forEach((line, index) => {
+                if (!line.trim()) return;
 
-        const cols = line.split(";");
-        const colA = cols[0]?.trim();
-        const colB = cols[1]?.trim();
-        const colC = cols[2]?.trim();
-        const colD = cols[3]?.trim();
+                const cols = line.split(";");
+                const colA = cols[0]?.trim();
+                const colB = cols[1]?.trim();
+                const colC = cols[2]?.trim();
+                const colD = cols[3]?.trim();
 
-        // TITEL / UNTERTITEL / ZWISCHENTITEL
-        if (colA === "Titel") {
-          html += `<div class="title">${colB}</div>`;
-          return;
-        }
-        if (colA === "Untertitel") {
-          html += `<div class="subtitle">${colB}</div>`;
-          return;
-        }
-        if (colA === "Zwischentitel") {
-          html += `<div class="midtitle">${colB}</div>`;
-          return;
-        }
+                // TITEL / UNTERTITEL / ZWISCHENTITEL
+                if (colA === "Titel") {
+                    html += `<div class="title">${colB}</div>`;
+                    return;
+                }
+                if (colA === "Untertitel") {
+                    html += `<div class="subtitle">${colB}</div>`;
+                    return;
+                }
+                if (colA === "Zwischentitel") {
+                    html += `<div class="midtitle">${colB}</div>`;
+                    return;
+                }
 
-        const preisVorhanden = colD && !isNaN(parseFloat(colD.replace(",", ".")));
+                const preisVorhanden = colD && !isNaN(parseFloat(colD.replace(",", ".")));
 
-        if (preisVorhanden) {
+                if (preisVorhanden) {
 
-if (!headerInserted) {
-    html += `
+                    if (!headerInserted) {
+                        html += `
       <div class="row table-header">
         <div></div>
         <div>Beschreibung</div>
@@ -1148,13 +1149,13 @@ if (!headerInserted) {
         <div style="text-align:right;">Positionsergebnis</div>
       </div>
     `;
-    headerInserted = true;
-  } 
+                        headerInserted = true;
+                    }
 
-          const preis = parseFloat(colD.replace(",", "."));
-          const savedValue = localStorage.getItem("page143Data" + index) || "0";
+                    const preis = parseFloat(colD.replace(",", "."));
+                    const savedValue = localStorage.getItem("page143Data" + index) || "0";
 
-          html += `<div class="row">
+                    html += `<div class="row">
                       <div class="col-a">${colA}</div>
                       <div class="col-b">${colB}</div>
                       <div class="col-c">${colC}</div>
@@ -1164,80 +1165,80 @@ if (!headerInserted) {
                              oninput="calcRow143(this, ${preis}, ${index})">
 
                       <div class="col-d">
-                        ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                        ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                       </div>
 
                       <div class="col-e">0,00 €</div>
                    </div>`;
-        } else {
+                } else {
 
-          html += `<div class="row no-price">
+                    html += `<div class="row no-price">
                       <div class="col-a">${colA}</div>
                       <div class="col-b" style="grid-column: 2 / 7;">${colB}</div>
                    </div>`;
-        }
-      });
+                }
+            });
 
-      html += `<div id="gesamtSumme143" class="gesamt">Gesamtsumme: 0,00 €</div>`;
-//      html += `<div id="gesamtSumme143Rabatt" class="gesamt rabatt" data-rabatt="angebot">
-//          Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
-//         </div>`;
+            html += `<div id="gesamtSumme143" class="gesamt">Gesamtsumme: 0,00 €</div>`;
+            //      html += `<div id="gesamtSumme143Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //          Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //         </div>`;
 
-     container.innerHTML = html;
+            container.innerHTML = html;
 
-      berechneGesamt143();
-    });
+            berechneGesamt143();
+        });
 }
 
 // Berechnung einzelner Zeilen
-	function calcRow143(input, preisWert, index) {
+function calcRow143(input, preisWert, index) {
 
-  	const row = input.parentElement;
-  	const ergebnis = row.querySelector(".col-e");
+    const row = input.parentElement;
+    const ergebnis = row.querySelector(".col-e");
 
-  	const menge = parseFloat(input.value.replace(",", ".")) || 0;
+    const menge = parseFloat(input.value.replace(",", ".")) || 0;
 
-  	const sum = menge * preisWert;
+    const sum = menge * preisWert;
 
-  	ergebnis.innerText =
-    	sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+    ergebnis.innerText =
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
- 	let gespeicherteWerte =
-    		JSON.parse(localStorage.getItem("page143Data") || "{}");
+    let gespeicherteWerte =
+        JSON.parse(localStorage.getItem("page143Data") || "{}");
 
-gespeicherteWerte[index] = menge;
+    gespeicherteWerte[index] = menge;
 
-localStorage.setItem("page143Data",
-    JSON.stringify(gespeicherteWerte));
+    localStorage.setItem("page143Data",
+        JSON.stringify(gespeicherteWerte));
 
-  berechneGesamt143();
+    berechneGesamt143();
 }
 
 // Berechnung Gesamtsumme
- 	function berechneGesamt143() {
+function berechneGesamt143() {
 
-  	let sum = 0;
+    let sum = 0;
 
-  	document.querySelectorAll("#page-14-3 .col-e").forEach(el => {
+    document.querySelectorAll("#page-14-3 .col-e").forEach(el => {
 
-    	const wert = parseFloat(
-      		el.innerText.replace("€","")
-                 .replace(/\./g,"")
-                 .replace(",",".")
-                 .trim()
-    	) || 0;
+        const wert = parseFloat(
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
+        ) || 0;
 
-    	sum += wert;
-  	});
+        sum += wert;
+    });
 
-// Zwischensumme für Seite 14.3 speichern
+    // Zwischensumme für Seite 14.3 speichern
     saveSeitenSumme("page-14-3", sum);
 
-// Gesamtsumme über alle Seiten
+    // Gesamtsumme über alle Seiten
     const gesamtDiv = document.getElementById("gesamtSumme143");
     if (gesamtDiv) {
         gesamtDiv.innerText =
-            "Gesamtsumme Angebot: " + getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            "Gesamtsumme Angebot: " + getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
@@ -1253,42 +1254,42 @@ async function loadPage40() {
         titleEl.innerText = (angebotTyp === "anfrage") ? "Anfrage" : "Kostenvoranschlag";
     }
 
-// Anfrage-Daten anzeigen (nur wenn angebotTyp === "anfrage")
-	const anfrageBox = document.getElementById("anfrage-daten");
-	const anfrageContent = document.getElementById("anfrage-daten-content");
+    // Anfrage-Daten anzeigen (nur wenn angebotTyp === "anfrage")
+    const anfrageBox = document.getElementById("anfrage-daten");
+    const anfrageContent = document.getElementById("anfrage-daten-content");
 
-	if (angebotTyp === "anfrage") {
-    		const p5 = JSON.parse(localStorage.getItem("page5Data") || "{}");
+    if (angebotTyp === "anfrage") {
+        const p5 = JSON.parse(localStorage.getItem("page5Data") || "{}");
 
-    const labels = {
-        "bv-contact": "Ansprechpartner bei PJ",
-        "bv-strasse": "SHK – PJ-Kunden-Nr.",
-        "bv-ort": "SHK Name/Firma",
-        "shk-contact": "SHK Ansprechpartner",
-        "shk-email": "SHK E-Mail",
-        "shk-phone": "SHK Telefon-Nr.",
-        "execution-date": "Gewünschter Ausführungstermin",
-        "vorabplanung": "Planung gewünscht?",
-        "baustellenbesichtigung": "Baustellenbesichtigung gewünscht?"
-        
-    };
+        const labels = {
+            "bv-contact": "Ansprechpartner bei PJ",
+            "bv-strasse": "SHK – PJ-Kunden-Nr.",
+            "bv-ort": "SHK Name/Firma",
+            "shk-contact": "SHK Ansprechpartner",
+            "shk-email": "SHK E-Mail",
+            "shk-phone": "SHK Telefon-Nr.",
+            "execution-date": "Gewünschter Ausführungstermin",
+            "vorabplanung": "Planung gewünscht?",
+            "baustellenbesichtigung": "Baustellenbesichtigung gewünscht?"
+
+        };
 
 
-    let html = "";
-    Object.keys(labels).forEach(id => {
-        const val = (p5[id] || "").trim();
-        if (val) {
-            html += `<div style="margin:6px 0;"><strong>${labels[id]}:</strong> ${val}</div>`;
+        let html = "";
+        Object.keys(labels).forEach(id => {
+            const val = (p5[id] || "").trim();
+            if (val) {
+                html += `<div style="margin:6px 0;"><strong>${labels[id]}:</strong> ${val}</div>`;
+            }
+        });
+
+        if (anfrageBox && anfrageContent) {
+            anfrageContent.innerHTML = html || "<div>Keine Anfrage-Daten vorhanden.</div>";
+            anfrageBox.style.display = "block";
         }
-    });
-
-    if (anfrageBox && anfrageContent) {
-        anfrageContent.innerHTML = html || "<div>Keine Anfrage-Daten vorhanden.</div>";
-        anfrageBox.style.display = "block";
+    } else {
+        if (anfrageBox) anfrageBox.style.display = "none";
     }
-} else {
-    if (anfrageBox) anfrageBox.style.display = "none";
-}
 
     const container = document.getElementById("summary-content");
     const hinweiseContainer = document.getElementById("hinweise-content");
@@ -1297,7 +1298,7 @@ async function loadPage40() {
     container.innerHTML = "";
     hinweiseContainer.innerHTML = "";
 
-container.innerHTML += `
+    container.innerHTML += `
   <div class="row table-header">
     <div></div>
     <div>Beschreibung</div>
@@ -1311,7 +1312,7 @@ container.innerHTML += `
     let gesamt = 0;
 
     const seitenConfig = [
-        { key: "page14Data",  csv: "ndf1.csv" },
+        { key: "page14Data", csv: "ndf1.csv" },
         { key: "page142Data", csv: "ndf5.csv" },
         { key: "page8Data", csv: "ndf6.csv" },
         { key: "page18Data", csv: "ndf7.csv" },
@@ -1374,8 +1375,8 @@ container.innerHTML += `
                     <div class="col-b">${colB}</div>
                     <div class="col-c">${colC}</div>
                     <div class="col-d">${menge.toLocaleString("de-DE", { minimumFractionDigits: 0 })}</div>
-                    <div class="col-e">${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €</div>
-                    <div class="col-f">${(menge * preis).toLocaleString("de-DE",{minimumFractionDigits:2})} €</div>
+                    <div class="col-e">${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €</div>
+                    <div class="col-f">${(menge * preis).toLocaleString("de-DE", { minimumFractionDigits: 2 })} €</div>
                 `;
 
                 container.appendChild(zeile);
@@ -1385,21 +1386,21 @@ container.innerHTML += `
         });
     }
 
-// Hinweise Frässystem
-	const fraesenHinweis = document.getElementById("fraesen-hinweis-print");
-	if (fraesenHinweis) {
- 	 fraesenHinweis.style.display = fraesenVerwendet ? "block" : "none";
-	}
- 
+    // Hinweise Frässystem
+    const fraesenHinweis = document.getElementById("fraesen-hinweis-print");
+    if (fraesenHinweis) {
+        fraesenHinweis.style.display = fraesenVerwendet ? "block" : "none";
+    }
+
     const angebotspreisEl = document.getElementById("angebotspreis");
     if (angebotspreisEl) {
         angebotspreisEl.innerText =
-            "Gesamtpreis: " + gesamt.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            "Gesamtpreis: " + gesamt.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 
-// refreshRabattDisplays();
+    // refreshRabattDisplays();
 
-// Hinweise laden (ndf4.csv)
+    // Hinweise laden (ndf4.csv)
     try {
         const hinweisRes = await fetch("ndf4.csv");
         const hinweisText = await hinweisRes.text();
@@ -1458,7 +1459,7 @@ function direktZumAngebot() {
 // -----------------------------
 
 function printPage40() {
-  window.print();
+    window.print();
 }
 
 // -----------------------------
@@ -1492,20 +1493,20 @@ function sendMailPage40() {
 
 function clearInputs() {
 
-optimiererVerwendet = false;
-  clearKomplettFlow();
+    optimiererVerwendet = false;
+    clearKomplettFlow();
 
 
-// localStorage komplett löschen
+    // localStorage komplett löschen
     localStorage.clear();
 
-// Eingabefelder im DOM leeren
+    // Eingabefelder im DOM leeren
     document.querySelectorAll("input").forEach(inp => inp.value = "");
 
-// Dynamische Inhalte leeren (damit nichts „stehen bleibt“)
+    // Dynamische Inhalte leeren (damit nichts „stehen bleibt“)
     const idsToClear = [
         "page14-content",
-       "content-14-3",
+        "content-14-3",
         "content-14-2",
         "content-8",
         "content-18",
@@ -1536,7 +1537,7 @@ optimiererVerwendet = false;
         if (el) el.innerHTML = "";
     });
 
-// Summen-Anzeige zurücksetzen
+    // Summen-Anzeige zurücksetzen
     const angebotspreis = document.getElementById("angebotspreis");
     if (angebotspreis) angebotspreis.innerText = "Gesamtsumme: 0,00 €";
 
@@ -1612,31 +1613,31 @@ optimiererVerwendet = false;
     const sum13 = document.getElementById("gesamtSumme13");
     if (sum13) sum13.innerText = "Gesamtsumme Angebot: 0,00 €";
 
-// Flags zurücksetzen, damit Seiten neu aus CSV geladen werden
+    // Flags zurücksetzen, damit Seiten neu aus CSV geladen werden
     page14Loaded = false;
 
-// Seite 14.3 hat kein Flag, daher reicht Container leeren
+    // Seite 14.3 hat kein Flag, daher reicht Container leeren
 
-// Angebots-Summen Objekt zurücksetzen (falls du es im RAM nutzt)
+    // Angebots-Summen Objekt zurücksetzen (falls du es im RAM nutzt)
     angebotSummen = {};
 
     currentUser = null;
     updateAdminUI_();
 
-//document.querySelectorAll('[data-rabatt="angebot"]').forEach(el => {
-//  el.innerText = "Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €";
-//});
+    //document.querySelectorAll('[data-rabatt="angebot"]').forEach(el => {
+    //  el.innerText = "Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €";
+    //});
 
-//const p40r = document.getElementById("angebotspreisRabatt");
-//if (p40r) p40r.innerText = "Gesamtpreis abzgl. SHK-Rabatt (15%): 0,00 €";
+    //const p40r = document.getElementById("angebotspreisRabatt");
+    //if (p40r) p40r.innerText = "Gesamtpreis abzgl. SHK-Rabatt (15%): 0,00 €";
 
-// zurück zu "page-3"
+    // zurück zu "page-3"
     showPage("page-3");
 }
 
-		// -----------------------------
-		// SEITE 14.2 – Tackersystem UPONOR (ndf5.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 14.2 – Tackersystem UPONOR (ndf5.csv)
+// -----------------------------
 
 function loadPage142() {
 
@@ -1651,7 +1652,7 @@ function loadPage142() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page142Data") || "{}");
@@ -1681,8 +1682,8 @@ function loadPage142() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -1692,8 +1693,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -1709,7 +1710,7 @@ if (!headerInserted) {
                                    oninput="calcRow142(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -1724,9 +1725,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme142" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme142Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme142Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt142();
@@ -1741,7 +1742,7 @@ function calcRow142(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page142Data") || "{}");
@@ -1757,10 +1758,10 @@ function berechneGesamt142() {
 
     document.querySelectorAll("#page-14-2 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -1771,13 +1772,13 @@ function berechneGesamt142() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 8 – Fräsen (ndf6.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 8 – Fräsen (ndf6.csv)
+// -----------------------------
 
 function loadPage8() {
 
@@ -1792,7 +1793,7 @@ function loadPage8() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
- 		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page8Data") || "{}");
@@ -1822,8 +1823,8 @@ function loadPage8() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -1833,8 +1834,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
                     const menge = gespeicherteWerte[index] || 0;
 
                     html += `
@@ -1849,7 +1850,7 @@ if (!headerInserted) {
                                    oninput="calcRow8(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -1864,9 +1865,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme8" class="gesamt">Gesamtsumme: 0,00 €</div>`;
-//            html += `<div id="gesamtSumme8Rabatt" class="gesamt rabatt" data-rabatt="angebot">
-//          Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
-//         </div>`;
+            //            html += `<div id="gesamtSumme8Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //          Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //         </div>`;
 
             container.innerHTML = html;
             berechneGesamt8();
@@ -1874,34 +1875,34 @@ if (!headerInserted) {
 }
 
 function setupFraesenHinweis() {
-  const page8 = document.getElementById("page-8");
-  if (!page8) return;
+    const page8 = document.getElementById("page-8");
+    if (!page8) return;
 
-  page8.addEventListener("input", (e) => {
-    const el = e.target;
+    page8.addEventListener("input", (e) => {
+        const el = e.target;
 
-    // nur Mengenfelder
-    if (!el.classList.contains("menge-input")) return;
+        // nur Mengenfelder
+        if (!el.classList.contains("menge-input")) return;
 
-    // nur wenn wirklich etwas eingegeben wird
-    const menge = Number(el.value) || 0;
-    if (menge <= 0) return;
+        // nur wenn wirklich etwas eingegeben wird
+        const menge = Number(el.value) || 0;
+        if (menge <= 0) return;
 
-    // merken: Fräsen wurde verwendet
-    fraesenVerwendet = true;
+        // merken: Fräsen wurde verwendet
+        fraesenVerwendet = true;
 
 
-    // Hinweis nur einmal anzeigen
-    if (fraesenHinweisGezeigt) return;
+        // Hinweis nur einmal anzeigen
+        if (fraesenHinweisGezeigt) return;
 
-    fraesenHinweisGezeigt = true;
+        fraesenHinweisGezeigt = true;
 
-    alert(
-      "Achtung!\n\n" +
-      "Bei Frässystemen können je nach Entfernung und Flächengröße zusätzliche Aufschläge anfallen.\n\n" +
-      "Bitte erfragen Sie hierzu ein individuelles Angebot."
-    );
-  });
+        alert(
+            "Achtung!\n\n" +
+            "Bei Frässystemen können je nach Entfernung und Flächengröße zusätzliche Aufschläge anfallen.\n\n" +
+            "Bitte erfragen Sie hierzu ein individuelles Angebot."
+        );
+    });
 }
 
 setupFraesenHinweis();
@@ -1914,7 +1915,7 @@ function calcRow8(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page8Data") || "{}");
@@ -1931,10 +1932,10 @@ function berechneGesamt8() {
 
     document.querySelectorAll("#page-8 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -1945,13 +1946,13 @@ function berechneGesamt8() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 18 – Unterdämmung (ndf7.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 18 – Unterdämmung (ndf7.csv)
+// -----------------------------
 
 function loadPage18() {
 
@@ -1966,7 +1967,7 @@ function loadPage18() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page18Data") || "{}");
@@ -1996,8 +1997,8 @@ function loadPage18() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -2007,8 +2008,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -2024,7 +2025,7 @@ if (!headerInserted) {
                                    oninput="calcRow18(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -2039,9 +2040,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme18" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme18Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme18Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt18();
@@ -2056,7 +2057,7 @@ function calcRow18(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page18Data") || "{}");
@@ -2073,10 +2074,10 @@ function berechneGesamt18() {
 
     document.querySelectorAll("#page-18 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -2087,13 +2088,13 @@ function berechneGesamt18() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 20 – Verteiler & Regeltechnik (ndf8.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 20 – Verteiler & Regeltechnik (ndf8.csv)
+// -----------------------------
 
 function loadPage20() {
 
@@ -2108,7 +2109,7 @@ function loadPage20() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page20Data") || "{}");
@@ -2138,8 +2139,8 @@ function loadPage20() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -2149,8 +2150,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -2166,7 +2167,7 @@ if (!headerInserted) {
                                    oninput="calcRow20(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -2181,9 +2182,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme20" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme20Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme20Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt20();
@@ -2198,7 +2199,7 @@ function calcRow20(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page20Data") || "{}");
@@ -2215,10 +2216,10 @@ function berechneGesamt20() {
 
     document.querySelectorAll("#page-20 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -2229,13 +2230,13 @@ function berechneGesamt20() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 21 – Dienstleistungen (ndf9.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 21 – Dienstleistungen (ndf9.csv)
+// -----------------------------
 
 function loadPage21() {
 
@@ -2250,7 +2251,7 @@ function loadPage21() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page21Data") || "{}");
@@ -2280,8 +2281,8 @@ function loadPage21() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -2291,8 +2292,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -2308,7 +2309,7 @@ if (!headerInserted) {
                                    oninput="calcRow21(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -2323,9 +2324,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme21" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme21Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme21Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt21();
@@ -2340,7 +2341,7 @@ function calcRow21(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page21Data") || "{}");
@@ -2357,10 +2358,10 @@ function berechneGesamt21() {
 
     document.querySelectorAll("#page-21 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -2371,13 +2372,13 @@ function berechneGesamt21() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 22 – Zuschläge (ndf10.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 22 – Zuschläge (ndf10.csv)
+// -----------------------------
 
 function loadPage22() {
 
@@ -2392,7 +2393,7 @@ function loadPage22() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page22Data") || "{}");
@@ -2422,8 +2423,8 @@ function loadPage22() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -2433,8 +2434,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -2450,7 +2451,7 @@ if (!headerInserted) {
                                    oninput="calcRow22(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -2465,9 +2466,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme22" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme22Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme22Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt22();
@@ -2482,7 +2483,7 @@ function calcRow22(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page22Data") || "{}");
@@ -2499,10 +2500,10 @@ function berechneGesamt22() {
 
     document.querySelectorAll("#page-22 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -2513,13 +2514,13 @@ function berechneGesamt22() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 9 – Estrich / ThermoWhite® (ndf11.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 9 – Estrich / ThermoWhite® (ndf11.csv)
+// -----------------------------
 
 function loadPage9() {
 
@@ -2534,7 +2535,7 @@ function loadPage9() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page9Data") || "{}");
@@ -2564,8 +2565,8 @@ function loadPage9() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -2575,8 +2576,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -2592,7 +2593,7 @@ if (!headerInserted) {
                                    oninput="calcRow9(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -2607,9 +2608,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme9" class="gesamt">Gesamtsumme: 0,00 €</div>`;
-//            html += `<div id="gesamtSumme9Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //            html += `<div id="gesamtSumme9Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt9();
@@ -2624,7 +2625,7 @@ function calcRow9(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page9Data") || "{}");
@@ -2641,10 +2642,10 @@ function berechneGesamt9() {
 
     document.querySelectorAll("#page-9 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -2655,13 +2656,13 @@ function berechneGesamt9() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 10 – Klett3mm (ndf2.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 10 – Klett3mm (ndf2.csv)
+// -----------------------------
 
 function loadPage10() {
 
@@ -2676,7 +2677,7 @@ function loadPage10() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page10Data") || "{}");
@@ -2706,8 +2707,8 @@ function loadPage10() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -2717,8 +2718,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -2734,7 +2735,7 @@ if (!headerInserted) {
                                    oninput="calcRow10(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -2749,9 +2750,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme10" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme10Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme10Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt10();
@@ -2766,7 +2767,7 @@ function calcRow10(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page10Data") || "{}");
@@ -2783,10 +2784,10 @@ function berechneGesamt10() {
 
     document.querySelectorAll("#page-10 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -2797,13 +2798,13 @@ function berechneGesamt10() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 23 – Aufbau 50mm (ndf12.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 23 – Aufbau 50mm (ndf12.csv)
+// -----------------------------
 
 function loadPage23() {
 
@@ -2818,7 +2819,7 @@ function loadPage23() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page23Data") || "{}");
@@ -2848,8 +2849,8 @@ function loadPage23() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -2859,8 +2860,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
 
                     const menge = gespeicherteWerte[index] || 0;
@@ -2877,7 +2878,7 @@ if (!headerInserted) {
                                    oninput="calcRow23(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -2892,9 +2893,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme23" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme23Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme23Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt23();
@@ -2909,7 +2910,7 @@ function calcRow23(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page23Data") || "{}");
@@ -2926,10 +2927,10 @@ function berechneGesamt23() {
 
     document.querySelectorAll("#page-23 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -2940,13 +2941,13 @@ function berechneGesamt23() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 24 – Aufbau 20/30mm + 3mm Deckschicht (ndf13.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 24 – Aufbau 20/30mm + 3mm Deckschicht (ndf13.csv)
+// -----------------------------
 
 function loadPage24() {
 
@@ -2961,7 +2962,7 @@ function loadPage24() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page24Data") || "{}");
@@ -2991,8 +2992,8 @@ function loadPage24() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3002,8 +3003,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
 
                     const menge = gespeicherteWerte[index] || 0;
@@ -3020,7 +3021,7 @@ if (!headerInserted) {
                                    oninput="calcRow24(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -3035,9 +3036,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme24" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme24Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
-  //       </div>`;
+            //           html += `<div id="gesamtSumme24Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //       </div>`;
 
             container.innerHTML = html;
             berechneGesamt24();
@@ -3052,7 +3053,7 @@ function calcRow24(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page24Data") || "{}");
@@ -3069,10 +3070,10 @@ function berechneGesamt24() {
 
     document.querySelectorAll("#page-24 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -3083,13 +3084,13 @@ function berechneGesamt24() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 25 – Aufbau 25mm (XPS) (ndf14.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 25 – Aufbau 25mm (XPS) (ndf14.csv)
+// -----------------------------
 
 function loadPage25() {
 
@@ -3104,7 +3105,7 @@ function loadPage25() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page25Data") || "{}");
@@ -3135,8 +3136,8 @@ function loadPage25() {
                 if (!isNaN(preis)) {
 
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3146,8 +3147,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -3163,7 +3164,7 @@ if (!headerInserted) {
                                    oninput="calcRow25(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -3178,9 +3179,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme25" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme25Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme25Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt25();
@@ -3195,7 +3196,7 @@ function calcRow25(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page25Data") || "{}");
@@ -3212,10 +3213,10 @@ function berechneGesamt25() {
 
     document.querySelectorAll("#page-25 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -3226,13 +3227,13 @@ function berechneGesamt25() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 27 – Klettsystem Handelsmarke (ndf15.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 27 – Klettsystem Handelsmarke (ndf15.csv)
+// -----------------------------
 
 function loadPage27() {
 
@@ -3247,7 +3248,7 @@ function loadPage27() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page27Data") || "{}");
@@ -3277,8 +3278,8 @@ let headerInserted = false;
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3288,8 +3289,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -3305,7 +3306,7 @@ if (!headerInserted) {
                                    oninput="calcRow27(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -3320,9 +3321,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme27" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme27Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme27Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt27();
@@ -3337,7 +3338,7 @@ function calcRow27(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page27Data") || "{}");
@@ -3354,10 +3355,10 @@ function berechneGesamt27() {
 
     document.querySelectorAll("#page-27 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -3368,13 +3369,13 @@ function berechneGesamt27() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 28 – Klettsystem Uponor (ndf16.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 28 – Klettsystem Uponor (ndf16.csv)
+// -----------------------------
 
 function loadPage28() {
 
@@ -3389,7 +3390,7 @@ function loadPage28() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page28Data") || "{}");
@@ -3419,8 +3420,8 @@ function loadPage28() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3430,8 +3431,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -3447,7 +3448,7 @@ if (!headerInserted) {
                                    oninput="calcRow28(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -3462,9 +3463,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme28" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme28Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme28Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt28();
@@ -3479,7 +3480,7 @@ function calcRow28(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page28Data") || "{}");
@@ -3496,10 +3497,10 @@ function berechneGesamt28() {
 
     document.querySelectorAll("#page-28 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -3510,13 +3511,13 @@ function berechneGesamt28() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 30 – Noppensystem Handelsmarke (ndf17.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 30 – Noppensystem Handelsmarke (ndf17.csv)
+// -----------------------------
 
 function loadPage30() {
 
@@ -3531,7 +3532,7 @@ function loadPage30() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page30Data") || "{}");
@@ -3561,8 +3562,8 @@ function loadPage30() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3572,8 +3573,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -3589,7 +3590,7 @@ if (!headerInserted) {
                                    oninput="calcRow30(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -3604,9 +3605,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme30" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme30Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme30Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt30();
@@ -3621,7 +3622,7 @@ function calcRow30(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page30Data") || "{}");
@@ -3638,10 +3639,10 @@ function berechneGesamt30() {
 
     document.querySelectorAll("#page-30 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -3652,13 +3653,13 @@ function berechneGesamt30() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 31 – Noppensystem Uponor (ndf18.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 31 – Noppensystem Uponor (ndf18.csv)
+// -----------------------------
 
 function loadPage31() {
 
@@ -3673,7 +3674,7 @@ function loadPage31() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page31Data") || "{}");
@@ -3703,8 +3704,8 @@ function loadPage31() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3714,8 +3715,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -3731,7 +3732,7 @@ if (!headerInserted) {
                                    oninput="calcRow31(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -3746,9 +3747,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme31" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme31Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme31Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt31();
@@ -3763,7 +3764,7 @@ function calcRow31(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page31Data") || "{}");
@@ -3780,10 +3781,10 @@ function berechneGesamt31() {
 
     document.querySelectorAll("#page-31 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -3794,13 +3795,13 @@ function berechneGesamt31() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 32 – Noppensystem Roth (ndf19.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 32 – Noppensystem Roth (ndf19.csv)
+// -----------------------------
 
 function loadPage32() {
 
@@ -3815,7 +3816,7 @@ function loadPage32() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page32Data") || "{}");
@@ -3845,8 +3846,8 @@ function loadPage32() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3856,8 +3857,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -3873,7 +3874,7 @@ if (!headerInserted) {
                                    oninput="calcRow32(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -3888,9 +3889,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme32" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme32Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme32Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt32();
@@ -3905,7 +3906,7 @@ function calcRow32(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page32Data") || "{}");
@@ -3922,10 +3923,10 @@ function berechneGesamt32() {
 
     document.querySelectorAll("#page-32 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -3936,13 +3937,13 @@ function berechneGesamt32() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 33 – Industrieboden (ndf20.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 33 – Industrieboden (ndf20.csv)
+// -----------------------------
 
 function loadPage33() {
 
@@ -3957,7 +3958,7 @@ function loadPage33() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page33Data") || "{}");
@@ -3987,8 +3988,8 @@ function loadPage33() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -3998,8 +3999,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -4015,7 +4016,7 @@ if (!headerInserted) {
                                    oninput="calcRow33(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -4030,9 +4031,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme33" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme33Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme33Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt33();
@@ -4047,7 +4048,7 @@ function calcRow33(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page33Data") || "{}");
@@ -4064,10 +4065,10 @@ function berechneGesamt33() {
 
     document.querySelectorAll("#page-33 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -4078,13 +4079,13 @@ function berechneGesamt33() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 35 – Parkett (ndf22.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 35 – Parkett (ndf22.csv)
+// -----------------------------
 
 function loadPage35() {
 
@@ -4099,7 +4100,7 @@ function loadPage35() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page35Data") || "{}");
@@ -4129,8 +4130,8 @@ function loadPage35() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -4140,8 +4141,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -4157,7 +4158,7 @@ if (!headerInserted) {
                                    oninput="calcRow35(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -4172,9 +4173,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme35" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme35Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme35Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt35();
@@ -4189,7 +4190,7 @@ function calcRow35(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page35Data") || "{}");
@@ -4206,10 +4207,10 @@ function berechneGesamt35() {
 
     document.querySelectorAll("#page-35 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -4220,13 +4221,13 @@ function berechneGesamt35() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 36 – Designbelag (ndf23.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 36 – Designbelag (ndf23.csv)
+// -----------------------------
 
 function loadPage36() {
 
@@ -4241,7 +4242,7 @@ function loadPage36() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page36Data") || "{}");
@@ -4271,8 +4272,8 @@ function loadPage36() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -4282,8 +4283,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -4299,7 +4300,7 @@ if (!headerInserted) {
                                    oninput="calcRow36(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -4314,9 +4315,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme36" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme36Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme36Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt36();
@@ -4331,7 +4332,7 @@ function calcRow36(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page36Data") || "{}");
@@ -4348,10 +4349,10 @@ function berechneGesamt36() {
 
     document.querySelectorAll("#page-36 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -4362,13 +4363,13 @@ function berechneGesamt36() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 37 – Teppichboden (ndf24.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 37 – Teppichboden (ndf24.csv)
+// -----------------------------
 
 function loadPage37() {
 
@@ -4383,7 +4384,7 @@ function loadPage37() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page37Data") || "{}");
@@ -4413,8 +4414,8 @@ function loadPage37() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -4424,8 +4425,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -4441,7 +4442,7 @@ if (!headerInserted) {
                                    oninput="calcRow37(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -4456,9 +4457,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme37" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme37Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme37Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt37();
@@ -4473,7 +4474,7 @@ function calcRow37(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page37Data") || "{}");
@@ -4490,10 +4491,10 @@ function berechneGesamt37() {
 
     document.querySelectorAll("#page-37 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -4504,13 +4505,13 @@ function berechneGesamt37() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 38 – Parkett schleifen (ndf25.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 38 – Parkett schleifen (ndf25.csv)
+// -----------------------------
 
 function loadPage38() {
 
@@ -4525,7 +4526,7 @@ function loadPage38() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
 
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page38Data") || "{}");
@@ -4555,8 +4556,8 @@ function loadPage38() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -4566,8 +4567,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -4583,7 +4584,7 @@ if (!headerInserted) {
                                    oninput="calcRow38(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -4598,9 +4599,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme38" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme38Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme38Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt38();
@@ -4615,7 +4616,7 @@ function calcRow38(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page38Data") || "{}");
@@ -4632,10 +4633,10 @@ function berechneGesamt38() {
 
     document.querySelectorAll("#page-38 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -4646,13 +4647,13 @@ function berechneGesamt38() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
-		// -----------------------------
-		// SEITE 13 – unbeheizte Fläche (ndf21.csv)
-		// -----------------------------
+// -----------------------------
+// SEITE 13 – unbeheizte Fläche (ndf21.csv)
+// -----------------------------
 
 function loadPage13() {
 
@@ -4667,7 +4668,7 @@ function loadPage13() {
 
             const lines = data.split("\n").slice(1);
             let html = "";
-		let headerInserted = false;
+            let headerInserted = false;
             const gespeicherteWerte =
                 JSON.parse(localStorage.getItem("page13Data") || "{}");
 
@@ -4696,8 +4697,8 @@ function loadPage13() {
                 const preis = parseFloat(colD?.replace(",", "."));
                 if (!isNaN(preis)) {
 
-if (!headerInserted) {
-        html += `
+                    if (!headerInserted) {
+                        html += `
           <div class="row table-header">
             <div></div>
             <div>Beschreibung</div>
@@ -4707,8 +4708,8 @@ if (!headerInserted) {
             <div style="text-align:right;">Positionsergebnis</div>
           </div>
         `;
-        headerInserted = true;
-}
+                        headerInserted = true;
+                    }
 
                     const menge = gespeicherteWerte[index] || 0;
 
@@ -4724,7 +4725,7 @@ if (!headerInserted) {
                                    oninput="calcRow13(this, ${preis}, ${index})">
 
                             <div class="col-d">
-                                ${preis.toLocaleString("de-DE",{minimumFractionDigits:2})} €
+                                ${preis.toLocaleString("de-DE", { minimumFractionDigits: 2 })} €
                             </div>
 
                             <div class="col-e">0,00 €</div>
@@ -4739,9 +4740,9 @@ if (!headerInserted) {
             });
 
             html += `<div id="gesamtSumme13" class="gesamt">Gesamtsumme: 0,00 €</div>`;
- //           html += `<div id="gesamtSumme13Rabatt" class="gesamt rabatt" data-rabatt="angebot">
- //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
- //        </div>`;
+            //           html += `<div id="gesamtSumme13Rabatt" class="gesamt rabatt" data-rabatt="angebot">
+            //         Gesamtsumme abzgl. SHK-Rabatt (15%): 0,00 €
+            //        </div>`;
 
             container.innerHTML = html;
             berechneGesamt13();
@@ -4756,7 +4757,7 @@ function calcRow13(input, preis, index) {
 
     const sum = menge * preis;
     ergebnis.innerText =
-        sum.toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+        sum.toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
 
     let gespeicherteWerte =
         JSON.parse(localStorage.getItem("page13Data") || "{}");
@@ -4773,10 +4774,10 @@ function berechneGesamt13() {
 
     document.querySelectorAll("#page-13 .col-e").forEach(el => {
         const wert = parseFloat(
-            el.innerText.replace("€","")
-                       .replace(/\./g,"")
-                       .replace(",",".")
-                       .trim()
+            el.innerText.replace("€", "")
+                .replace(/\./g, "")
+                .replace(",", ".")
+                .trim()
         ) || 0;
         sum += wert;
     });
@@ -4787,7 +4788,7 @@ function berechneGesamt13() {
     if (gesamtDiv) {
         gesamtDiv.innerText =
             "Gesamtsumme Angebot: " +
-            getGesamtAngebotssumme().toLocaleString("de-DE",{minimumFractionDigits:2}) + " €";
+            getGesamtAngebotssumme().toLocaleString("de-DE", { minimumFractionDigits: 2 }) + " €";
     }
 }
 
@@ -4795,33 +4796,33 @@ function berechneGesamt13() {
 // Eingabefelder - 0 entfernen bei Eingabe
 // -----------------------------
 
-     function setupAutoClearZeroInputs() {
-       document.addEventListener("focusin", (e) => {
-         const el = e.target;
-         if (el && el.classList && el.classList.contains("menge-input")) {
-           if (el.value === "0") el.value = "";
-         }
-       });
-
-// Optional: falls man mit Wheel/Arrow Keys aus Versehen wieder 0 reinbekommt
-      document.addEventListener("input", (e) => {
+function setupAutoClearZeroInputs() {
+    document.addEventListener("focusin", (e) => {
         const el = e.target;
         if (el && el.classList && el.classList.contains("menge-input")) {
-          if (el.value === "0") {
-// wenn wirklich 0 eingegeben wurde, lassen wir es drin -> daher NICHT löschen
-          }
+            if (el.value === "0") el.value = "";
         }
-      });
-    }
+    });
 
-    setupAutoClearZeroInputs();
+    // Optional: falls man mit Wheel/Arrow Keys aus Versehen wieder 0 reinbekommt
+    document.addEventListener("input", (e) => {
+        const el = e.target;
+        if (el && el.classList && el.classList.contains("menge-input")) {
+            if (el.value === "0") {
+                // wenn wirklich 0 eingegeben wurde, lassen wir es drin -> daher NICHT löschen
+            }
+        }
+    });
+}
+
+setupAutoClearZeroInputs();
 
 // -----------------------------
 // Spaltenüberschriften
 // -----------------------------
 
 function renderTableHeader() {
-  return `
+    return `
     <div class="row table-header">
       <div></div>
       <div>Beschreibung</div>
@@ -4838,119 +4839,119 @@ function renderTableHeader() {
 // -----------------------------
 
 async function sharePdf() {
-// ---- Mobile-Fix: html2canvas rendert sonst gerne "aus der Mitte" ----
-  const oldScrollX = window.scrollX || 0;
-  const oldScrollY = window.scrollY || 0;
+    // ---- Mobile-Fix: html2canvas rendert sonst gerne "aus der Mitte" ----
+    const oldScrollX = window.scrollX || 0;
+    const oldScrollY = window.scrollY || 0;
 
-// Seite nach ganz oben, damit Canvas sauber rendert
-  window.scrollTo(0, 0);
-  await new Promise(r => requestAnimationFrame(r));
+    // Seite nach ganz oben, damit Canvas sauber rendert
+    window.scrollTo(0, 0);
+    await new Promise(r => requestAnimationFrame(r));
 
-  const h2p = window.html2pdf;
-  if (!h2p) {
-    alert("html2pdf ist nicht geladen. Prüfe: Script-Tag in index.html muss VOR app.js stehen und darf nicht geblockt werden.");
-    window.scrollTo(oldScrollX, oldScrollY);
-    return;
-  }
-
-  const el = document.getElementById("page-40");
-
-// Warten bis Seite 40 komplett aufgebaut ist (wichtig fürs Smartphone!)
-  if (typeof page40Promise !== "undefined" && page40Promise) {
-    await page40Promise;
-// kurzer Render-Puffer
-    await new Promise(r => setTimeout(r, 150));
-  }
-
-  if (!el) {
-    alert("Seite 40 nicht gefunden.");
-    window.scrollTo(oldScrollX, oldScrollY);
-    return;
-  }
-
-  const angebotTyp = localStorage.getItem("angebotTyp") || "kv";
-  const datum = new Date().toLocaleDateString("de-DE").replaceAll(".", "-");
-  const filename = (angebotTyp === "anfrage")
-    ? `Anfrage_${datum}.pdf`
-    : `Kostenvoranschlag_${datum}.pdf`;
-
-  document.body.classList.add("pdf-mode");
-
-// Logo nur fürs PDF in Seite 40 klonen
-  let tempLogo = null;
-  const existingLogo = document.querySelector("img.logo");
-  if (existingLogo) {
-    tempLogo = existingLogo.cloneNode(true);
-    tempLogo.classList.add("temp-pdf-logo");
-    el.insertBefore(tempLogo, el.firstChild);
-  }
-
-  await new Promise(r => requestAnimationFrame(r));
-
-// Desktop-Erkennung: hier KEIN navigator.share() verwenden
-  const isMobile =
-    /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
-    (navigator.maxTouchPoints > 1 && window.matchMedia("(max-width: 1024px)").matches);
-
-  try {
-    const opt = {
-      margin: 10,
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: "#ffffff",
-        scrollX: 0,
-        scrollY: 0,
-        windowWidth: document.documentElement.scrollWidth,
-        windowHeight: document.documentElement.scrollHeight
-      },
-      pagebreak: { mode: ["css", "legacy"] },
-      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-    };
-
-    const worker = h2p().set(opt).from(el).toPdf();
-    const pdf = await worker.get("pdf");
-    if (!pdf) throw new Error("PDF-Objekt ist null.");
-
-    const blob = pdf.output("blob");
-    const file = new File([blob], filename, { type: "application/pdf" });
-
- // 1) NUR AUF MOBILE teilen versuchen (damit auf Windows nicht dieses Share-Fenster aufgeht)
-    if (isMobile && navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-      try {
-        await navigator.share({ title: filename, text: "PDF", files: [file] });
+    const h2p = window.html2pdf;
+    if (!h2p) {
+        alert("html2pdf ist nicht geladen. Prüfe: Script-Tag in index.html muss VOR app.js stehen und darf nicht geblockt werden.");
+        window.scrollTo(oldScrollX, oldScrollY);
         return;
-      } catch (e) {
-        console.warn("Mobile Share blockiert/abgebrochen, Fallback:", e);
-        // Fallback unten
-      }
     }
 
- // 2) Fallback: Öffnen + Download (Desktop immer, Mobile wenn Share nicht geht)
-    const url = URL.createObjectURL(blob);
+    const el = document.getElementById("page-40");
 
- // Öffnen ist oft der bequemste Weg, um danach in Outlook/WhatsApp manuell anzuhängen
-    window.open(url, "_blank", "noopener");
+    // Warten bis Seite 40 komplett aufgebaut ist (wichtig fürs Smartphone!)
+    if (typeof page40Promise !== "undefined" && page40Promise) {
+        await page40Promise;
+        // kurzer Render-Puffer
+        await new Promise(r => setTimeout(r, 150));
+    }
 
- // Download als verlässlicher Pfad (vor allem für Outlook)
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    if (!el) {
+        alert("Seite 40 nicht gefunden.");
+        window.scrollTo(oldScrollX, oldScrollY);
+        return;
+    }
 
-    setTimeout(() => URL.revokeObjectURL(url), 30000);
+    const angebotTyp = localStorage.getItem("angebotTyp") || "kv";
+    const datum = new Date().toLocaleDateString("de-DE").replaceAll(".", "-");
+    const filename = (angebotTyp === "anfrage")
+        ? `Anfrage_${datum}.pdf`
+        : `Kostenvoranschlag_${datum}.pdf`;
 
-  } catch (err) {
-    console.error("sharePdf Fehler:", err);
-    alert("PDF konnte nicht erstellt/geteilt werden:\n" + (err?.message || err));
-  } finally {
-    if (tempLogo) tempLogo.remove();
-    document.body.classList.remove("pdf-mode");
-    window.scrollTo(oldScrollX, oldScrollY);
-  }
+    document.body.classList.add("pdf-mode");
+
+    // Logo nur fürs PDF in Seite 40 klonen
+    let tempLogo = null;
+    const existingLogo = document.querySelector("img.logo");
+    if (existingLogo) {
+        tempLogo = existingLogo.cloneNode(true);
+        tempLogo.classList.add("temp-pdf-logo");
+        el.insertBefore(tempLogo, el.firstChild);
+    }
+
+    await new Promise(r => requestAnimationFrame(r));
+
+    // Desktop-Erkennung: hier KEIN navigator.share() verwenden
+    const isMobile =
+        /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+        (navigator.maxTouchPoints > 1 && window.matchMedia("(max-width: 1024px)").matches);
+
+    try {
+        const opt = {
+            margin: 10,
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: "#ffffff",
+                scrollX: 0,
+                scrollY: 0,
+                windowWidth: document.documentElement.scrollWidth,
+                windowHeight: document.documentElement.scrollHeight
+            },
+            pagebreak: { mode: ["css", "legacy"] },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+        };
+
+        const worker = h2p().set(opt).from(el).toPdf();
+        const pdf = await worker.get("pdf");
+        if (!pdf) throw new Error("PDF-Objekt ist null.");
+
+        const blob = pdf.output("blob");
+        const file = new File([blob], filename, { type: "application/pdf" });
+
+        // 1) NUR AUF MOBILE teilen versuchen (damit auf Windows nicht dieses Share-Fenster aufgeht)
+        if (isMobile && navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+            try {
+                await navigator.share({ title: filename, text: "PDF", files: [file] });
+                return;
+            } catch (e) {
+                console.warn("Mobile Share blockiert/abgebrochen, Fallback:", e);
+                // Fallback unten
+            }
+        }
+
+        // 2) Fallback: Öffnen + Download (Desktop immer, Mobile wenn Share nicht geht)
+        const url = URL.createObjectURL(blob);
+
+        // Öffnen ist oft der bequemste Weg, um danach in Outlook/WhatsApp manuell anzuhängen
+        window.open(url, "_blank", "noopener");
+
+        // Download als verlässlicher Pfad (vor allem für Outlook)
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+
+        setTimeout(() => URL.revokeObjectURL(url), 30000);
+
+    } catch (err) {
+        console.error("sharePdf Fehler:", err);
+        alert("PDF konnte nicht erstellt/geteilt werden:\n" + (err?.message || err));
+    } finally {
+        if (tempLogo) tempLogo.remove();
+        document.body.classList.remove("pdf-mode");
+        window.scrollTo(oldScrollX, oldScrollY);
+    }
 }
 
 window.sharePdf = sharePdf;
@@ -4960,38 +4961,38 @@ window.sharePdf = sharePdf;
 // -----------------------------
 
 function showLoader40(show) {
-  const l = document.getElementById("loader40");
-  if (!l) return;
-  l.classList.toggle("hidden", !show);
+    const l = document.getElementById("loader40");
+    if (!l) return;
+    l.classList.toggle("hidden", !show);
 }
 
 
 // -----------------------------
 
 window.addEventListener("popstate", (e) => {
-  const page = e.state?.page || location.hash.replace("#", "");
+    const page = e.state?.page || location.hash.replace("#", "");
 
-  if (!page) return;
+    if (!page) return;
 
-  // Login-Seite blockieren, wenn eingeloggt
-  if (page === "page-login" && auth.currentUser) {
-    showPage("page-3", true);
-    return;
-  }
+    // Login-Seite blockieren, wenn eingeloggt
+    if (page === "page-login" && auth.currentUser) {
+        showPage("page-3", true);
+        return;
+    }
 
-  showPage(page, true);
+    showPage(page, true);
 });
 
 function getInitialPage() {
-  const hash = location.hash.replace("#", "");
-  return hash || "page-3";
+    const hash = location.hash.replace("#", "");
+    return hash || "page-3";
 }
 
 // -----------------------------
 
 document.body.addEventListener("mousemove", () => remaining = 600);
 document.body.addEventListener("keydown", () => remaining = 600);
-		
+
 // -----------------------------
 // Funktionen für HTML global verfügbar machen
 // -----------------------------
