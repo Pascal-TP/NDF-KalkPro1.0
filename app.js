@@ -548,7 +548,7 @@ async function login() {
     // 2) Dann Datenschutz-Haken prüfen
     if (!isPrivacyAccepted()) {
         if (loginError) loginError.innerText =
-            "Bitte bestätigen Sie die Datenschutzerklärung (Haken setzen), um sich anzumelden.";
+            "Bitte bestätigen Sie die Datenschutzerklärung und allgemeinen Hinweise (Haken setzen), um sich anzumelden.";
         return;
     }
 
